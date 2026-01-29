@@ -1,0 +1,893 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Skip to content link for accessibility */
+.skip-link {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background: var(--color-1);
+	color: var(--white);
+	padding: 12px 20px;
+	z-index: 100;
+	text-decoration: none;
+	font-weight: 600;
+	border-radius: 0 0 6px 0;
+	font-size: 1rem;
+	transition: top 150ms ease;
+}
+
+.skip-link:focus {
+	top: 0;
+	outline: 3px solid var(--primary-blue);
+	outline-offset: 2px;
+}
+
+.skip-link:focus-visible {
+	top: 0;
+}
+
+/* Global background and panel styles for improved readability */
+:root {
+	/* Clash Display Palette - Primary */
+	--primary-blue: #7EBBBF;
+	--primary-dark: #050F2A;
+	--primary-light: #F2FDFF;
+	--primary-purple: #B8A0FF;
+	
+	/* Legacy palette placeholders (if needed elsewhere) */
+	--color-1: #050F2A;
+	--color-2: #0A1940;
+	--color-3: #7EBBBF;
+	--color-4: #4A5C6A;
+	--color-5: #B8A0FF;
+	--color-6: #F2FDFF;
+	
+	/* Alpine dusk palette */
+	--crimson-deep: #050F2A;
+	--crimson: #7EBBBF;
+	--vermillion: #B8A0FF;
+	--sandstone: #F2FDFF;
+	--graphite: #050F2A;
+	--slate: #7EBBBF;
+	
+	/* Theme variables */
+	--black: #380F17;
+	--white: #ffffff;
+	--muted: #EFDFC5;
+	--muted-dark: #4C4F54;
+	--text-dark: #252B2B;
+	--text-dark-secondary: #4C4F54;
+	--text-light: #ffffff;
+	--text-light-secondary: rgba(255,255,255,0.8);
+	--accent: #DC2011;
+	--transition-fast: 150ms ease;
+	
+	/* Page-specific color combinations */
+	--ocean-dark: var(--crimson-deep);
+	--ocean-mid: var(--crimson);
+	--ocean-light: var(--vermillion);
+	--sunrise-light: var(--sandstone);
+	--sunrise-mid: var(--slate);
+	--sunrise-dark: var(--graphite);
+	--indigo-dark: var(--crimson-deep);
+	--indigo-mid: var(--crimson);
+	--indigo-light: var(--graphite);
+	--contrast-dark: var(--graphite);
+	--contrast-mid: var(--slate);
+}
+
+html, body, #root {
+	height: 100%;
+}
+
+.app-bg {
+	/* Light background using the palette */
+	background: var(--sandstone);
+	color: var(--text-dark);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Background helpers that also set readable text color */
+.bg-black {
+	background: var(--black) !important;
+	color: var(--white) !important;
+}
+.bg-white {
+	background: var(--white) !important;
+	color: var(--black) !important;
+}
+
+/* Typographic system for optimal readability */
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	letter-spacing: 0.01em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	color: var(--text-dark);
+}
+
+/* Enhanced text rendering for footer and dark backgrounds */
+footer {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+footer h3,
+footer p,
+footer a,
+footer address {
+	font-weight: 500;
+	letter-spacing: 0.01em;
+}
+
+/* Enhanced text rendering for contact page */
+.bg-gradient-ocean address,
+.bg-gradient-ocean h1,
+.bg-gradient-ocean p,
+.bg-gradient-ocean a {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-weight: 500;
+}
+
+/* --- Navigation --- */
+.navbar-bg {
+	background: var(--primary-dark);
+	border-bottom: 4px solid var(--primary-blue);
+	box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.brand-nav {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+}
+
+.brand-nav .nav-link {
+	color: #fff;
+	font-size: 0.95rem;
+	padding: 0.75rem 0;
+	position: relative;
+	transition: color var(--transition-fast);
+}
+
+.brand-nav .nav-link::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -6px;
+	width: 100%;
+	height: 3px;
+	background: var(--sandstone);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 200ms ease;
+}
+
+.brand-nav .nav-link:hover::after,
+.brand-nav .nav-link.nav-accent::after {
+	transform: scaleX(1);
+}
+
+.brand-nav .nav-link:hover {
+	color: var(--sandstone);
+}
+
+.brand-nav .brand-cta {
+	background: var(--primary-blue);
+	color: var(--primary-dark);
+	padding: 0.65rem 1.5rem;
+	border-radius: 999px;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.brand-nav .brand-cta:hover {
+	background: var(--primary-purple);
+	color: var(--primary-light);
+	transform: translateY(-2px);
+	box-shadow: 0 8px 24px rgba(184, 160, 255, 0.4);
+}
+
+.dropdown-wrapper {
+	position: relative;
+}
+
+.dropdown-panel {
+	position: absolute;
+	top: calc(100% + 0.75rem);
+	left: 50%;
+	transform: translateX(-50%);
+	background: var(--primary-dark);
+	color: #fff;
+	padding: 1.5rem;
+	border-radius: 1rem;
+	box-shadow: 0 18px 40px rgba(0,0,0,0.2);
+	min-width: 18rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.85rem;
+	border-top: 4px solid var(--primary-purple);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.dropdown-wrapper.open .dropdown-panel {
+	opacity: 1;
+	pointer-events: auto;
+	transform: translate(-50%, 0);
+}
+
+.dropdown-link {
+	display: flex;
+	flex-direction: column;
+	gap: 0.15rem;
+	padding: 0.35rem 0;
+}
+
+.dropdown-link span {
+	font-size: 0.85rem;
+	color: rgba(255,255,255,0.85);
+	font-weight: 400;
+	text-transform: none;
+	letter-spacing: normal;
+}
+
+.dropdown-link strong {
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	font-size: 0.95rem;
+}
+
+.dropdown-link:hover strong {
+	color: var(--primary-blue);
+}
+
+.mobile-menu {
+	background: #fff;
+	color: var(--text-dark);
+	border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.mobile-menu button {
+	text-align: left;
+	width: 100%;
+	padding: 0.85rem 0;
+	font-weight: 600;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+
+.mobile-dropdown {
+	background: rgba(56,15,23,0.08);
+	border-left: 3px solid var(--crimson-deep);
+	padding: 0.75rem 1rem 1rem 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.65rem;
+}
+
+.mobile-dropdown a {
+	font-size: 0.95rem;
+}
+
+/* --- Hero + sections --- */
+.brand-hero {
+	background: linear-gradient(135deg, var(--primary-dark) 0%, #0A2735 100%);
+	color: #fff;
+	display: grid;
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+	gap: 2.5rem;
+	padding: 3rem 0;
+}
+
+@media (min-width: 1024px) {
+	.brand-hero {
+		grid-template-columns: 1.3fr 1fr;
+	}
+}
+
+.brand-hero__content {
+	padding: 1rem;
+}
+
+.brand-hero__content h1 {
+	font-size: clamp(2.25rem, 5vw, 3.75rem);
+	line-height: 1.15;
+	font-weight: 800;
+	margin-bottom: 1rem;
+}
+
+.brand-hero__content p {
+	color: rgba(255,255,255,0.92);
+	font-size: 1.05rem;
+}
+
+.brand-hero__stats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	margin-top: 2rem;
+}
+
+.brand-hero__stats span {
+	display: block;
+	font-size: 2rem;
+	font-weight: 800;
+	color: var(--primary-blue);
+}
+
+.brand-hero__stats small {
+	text-transform: uppercase;
+	letter-spacing: 0.18em;
+	font-size: 0.75rem;
+	color: rgba(255,255,255,0.8);
+}
+
+.brand-hero__card {
+	background: rgba(0,0,0,0.2);
+	border: 1px solid rgba(255,255,255,0.15);
+	border-radius: 1.5rem;
+	padding: 1.75rem;
+	box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.brand-hero__card .hero-image {
+	width: 100%;
+	height: 220px;
+	object-fit: cover;
+	border-radius: 1rem;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.section-label {
+	text-transform: uppercase;
+	letter-spacing: 0.35em;
+	font-size: 0.75rem;
+	font-weight: 700;
+	color: var(--crimson);
+}
+
+.section-title {
+	font-size: clamp(2rem, 4vw, 3rem);
+	font-weight: 800;
+	color: var(--graphite);
+	line-height: 1.2;
+}
+
+.section-text {
+	font-size: 1.1rem;
+	color: var(--text-dark-secondary);
+	line-height: 1.7;
+}
+
+.section-padded {
+	padding: 4rem 1.25rem;
+}
+
+.section-padded .section-text {
+	margin-top: 1rem;
+}
+
+.highlight-card {
+	background: #fff;
+	border-radius: 1.5rem;
+	padding: 1.5rem;
+	box-shadow: 0 20px 40px rgba(6, 20, 27, 0.12);
+}
+
+.brand-sunrise {
+	background: linear-gradient(135deg, var(--primary-purple) 0%, #7F5FD8 100%);
+	color: white;
+}
+
+.info-card {
+	background: rgba(255,255,255,0.95);
+	border-radius: 1.25rem;
+	padding: 1.75rem;
+	box-shadow: 0 12px 24px rgba(6, 20, 27, 0.08);
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.info-card h3 {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.story-card {
+	background: #fff;
+	border-radius: 1.25rem;
+	padding: 1.5rem;
+	border: 1px solid rgba(0,0,0,0.05);
+	box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.story-card h3 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--text-dark);
+}
+
+.story-card p {
+	color: var(--text-dark-secondary);
+}
+
+.story-tag {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	font-weight: 800;
+	letter-spacing: 0.35em;
+	color: var(--vermillion);
+}
+
+.link-inline {
+	font-weight: 700;
+	color: var(--vermillion);
+}
+
+.link-inline:hover {
+	color: var(--crimson-deep);
+	text-decoration: underline;
+}
+
+.btn-alt {
+	border: 2px solid #fff;
+	color: #fff;
+	padding: 0.6rem 1.75rem;
+	border-radius: 999px;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	transition: background var(--transition-fast), color var(--transition-fast), border var(--transition-fast);
+}
+
+.btn-alt:hover {
+	background: #fff;
+	color: var(--crimson-deep);
+	border-color: #fff;
+}
+
+/* Improved heading typography with responsive scaling */
+h1 {
+	font-size: 2rem; /* 32px base */
+	line-height: 1.2;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+	h1 {
+		font-size: 2.25rem; /* 36px on md+ */
+	}
+}
+
+h2 {
+	font-size: 1.5rem; /* 24px base */
+	line-height: 1.3;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+	margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+	h2 {
+		font-size: 1.75rem; /* 28px on md+ */
+	}
+}
+
+h3 {
+	font-size: 1.25rem; /* 20px base */
+	line-height: 1.4;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+	h3 {
+		font-size: 1.375rem; /* 22px on md+ */
+	}
+}
+
+p {
+	font-size: 1rem; /* 16px */
+	line-height: 1.7;
+	margin-bottom: 1rem;
+	color: var(--text-dark-secondary);
+}
+
+/* Ensure minimum font size for readability */
+@media (max-width: 640px) {
+	body {
+		font-size: 15px;
+	}
+	
+	p {
+		font-size: 15px;
+		line-height: 1.6;
+	}
+}
+
+/* Text color utilities with proper contrast */
+.text-primary {
+	color: var(--text-dark);
+}
+
+.text-secondary {
+	color: var(--text-dark-secondary);
+}
+
+.text-white-primary {
+	color: var(--text-light);
+}
+
+.text-white-secondary {
+	color: var(--text-light-secondary);
+}
+
+button, input, textarea {
+	font-family: inherit;
+	letter-spacing: 0.02em;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Global focus visible styles for keyboard navigation */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+	outline: 3px solid var(--primary-blue);
+	outline-offset: 2px;
+	border-radius: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+	button:focus-visible,
+	a:focus-visible,
+	input:focus-visible,
+	textarea:focus-visible,
+	select:focus-visible {
+		outline-width: 4px;
+		outline-offset: 3px;
+	}
+}
+
+/* Reduced motion support for users with vestibular disorders */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+.panel {
+	background: rgba(255, 255, 255, 0.95);
+	color: var(--text-dark);
+	box-shadow: 0 2px 8px rgba(6, 20, 27, 0.1);
+	border-radius: 8px;
+	border: 1px solid rgba(6, 20, 27, 0.1);
+	transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+	padding: 1.5rem;
+}
+
+.panel:hover {
+	box-shadow: 0 4px 12px rgba(6, 20, 27, 0.15);
+	background: rgba(255, 255, 255, 1);
+}
+
+/* Previously panels inverted on hover globally. That caused contrast issues when
+   text and background colors were mixed across sections. We remove the global
+   hover invert and provide a targeted class `.panel-invert` to opt-in only
+   where the effect should apply (e.g., Core Values). */
+
+/* Invert behavior only when explicitly requested via .panel-invert */
+.panel-invert:hover {
+	background: linear-gradient(135deg, var(--color-2) 0%, var(--color-3) 100%);
+	color: var(--white);
+	transform: translateY(-4px);
+	box-shadow: 0 6px 20px rgba(6, 20, 27, 0.25);
+}
+
+/* Enhanced hero panel with better contrast using new palette */
+.hero-panel {
+	background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(12px);
+	border-radius: 12px;
+	padding: 3rem 2rem;
+	position: relative;
+	overflow: hidden;
+	transition: transform var(--transition-fast);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 8px 32px rgba(6, 20, 27, 0.3);
+}
+
+/* subtle diagonal pattern overlay in hero */
+.hero-panel::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0 8px, transparent 8px 16px);
+	pointer-events: none;
+	mix-blend-mode: overlay;
+}
+
+/* Accent button utility */
+.btn-accent {
+	background: var(--color-1);
+	color: var(--white);
+	padding: 0.5rem 0.85rem;
+	border-radius: 0.375rem; /* subtle rounding */
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	border: 1px solid var(--color-1);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.4rem;
+	transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.btn-accent:hover {
+	background: var(--color-2);
+	border-color: var(--color-2);
+	color: var(--white);
+	transform: translateY(-2px);
+	box-shadow: 0 6px 18px rgba(6, 20, 27, 0.3);
+}
+.btn-accent.rounded-full {
+	border-radius: 9999px;
+}
+
+/* Nav link accent */
+.nav-accent {
+	color: var(--white);
+	background: var(--black);
+}
+
+/* Base nav-link styling (desktop overrides in .brand-nav) */
+.nav-link {
+	position: relative;
+	padding-bottom: 4px;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	transition: color var(--transition-fast);
+}
+.nav-link:focus {
+	outline: 2px solid var(--primary-light);
+	outline-offset: 4px;
+	border-radius: 2px;
+}
+
+.nav-link:focus-visible {
+	outline: 3px solid var(--primary-light);
+	outline-offset: 4px;
+}
+
+/* Navbar background variant using the theme */
+.navbar-bg {
+	background: rgba(6, 20, 27, 0.85);
+	backdrop-filter: blur(10px);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Enhanced background palettes using the new color scheme --- */
+/* Ocean gradient: Dark navy to teal - for hero sections */
+.bg-gradient-ocean {
+	background: linear-gradient(135deg, var(--primary-dark) 0%, #0A2735 50%, #0D3B47 100%);
+	color: var(--text-light);
+}
+
+.bg-gradient-ocean h1,
+.bg-gradient-ocean h2,
+.bg-gradient-ocean h3 {
+	color: var(--text-light);
+}
+
+.bg-gradient-ocean p {
+	color: var(--text-light-secondary);
+}
+
+/* Sunrise gradient: Light lavender to light background - for uplifting sections */
+.bg-gradient-sunrise {
+	background: linear-gradient(135deg, var(--primary-light) 0%, #E8F4FF 50%, #F5ECFF 100%);
+	color: var(--text-dark);
+}
+
+.bg-gradient-sunrise h1,
+.bg-gradient-sunrise h2,
+.bg-gradient-sunrise h3 {
+	color: var(--text-dark);
+}
+
+.bg-gradient-sunrise p {
+	color: var(--text-dark-secondary);
+}
+
+/* Indigo gradient: Dark navy to dark teal - for impactful sections */
+.bg-gradient-indigo {
+	background: linear-gradient(135deg, var(--primary-dark) 0%, #0A1F2E 40%, #0D3B47 100%);
+	color: var(--text-light);
+}
+
+.bg-gradient-indigo h1,
+.bg-gradient-indigo h2,
+.bg-gradient-indigo h3 {
+	color: var(--text-light);
+}
+
+.bg-gradient-indigo p {
+	color: var(--text-light-secondary);
+}
+
+/* Contrast gradient: Dark navy - for metrics and emphasis */
+.bg-gradient-contrast {
+	background: linear-gradient(135deg, var(--primary-dark) 0%, #0A1F2E 100%);
+	color: var(--text-light);
+}
+
+.bg-gradient-contrast h1,
+.bg-gradient-contrast h2,
+.bg-gradient-contrast h3 {
+	color: var(--text-light);
+}
+
+.bg-gradient-contrast p {
+	color: var(--text-light-secondary);
+}
+
+/* Light background: Light palette - for content sections */
+.bg-light {
+	background: linear-gradient(180deg, var(--primary-light) 0%, #E8F4FF 100%);
+	color: var(--text-dark);
+}
+
+.bg-light h1,
+.bg-light h2,
+.bg-light h3 {
+	color: var(--text-dark);
+}
+
+.bg-light p {
+	color: var(--text-dark-secondary);
+}
+
+/* Helper class to set text color within a section explicitly */
+.text-section {
+	color: inherit;
+}
+
+/* Text color utilities with proper contrast */
+.text-on-white { 
+	color: var(--text-dark) !important; 
+}
+
+.text-on-white-secondary {
+	color: var(--text-dark-secondary) !important;
+}
+
+.text-on-black { 
+	color: var(--text-light) !important; 
+}
+
+.text-on-black-secondary {
+	color: var(--text-light-secondary) !important;
+}
+
+/* Improved text opacity utilities for better readability */
+.text-opacity-90 {
+	opacity: 0.95;
+}
+
+.text-opacity-80 {
+	opacity: 0.9;
+}
+
+/* End palette utilities */
+
+/* Slideshow animations */
+.slideshow-container {
+	position: relative;
+	overflow: hidden;
+	touch-action: pan-y pinch-zoom;
+	border-radius: 0.75rem;
+}
+
+.slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transform: translateX(100%);
+	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	will-change: transform, opacity;
+}
+
+.slide.active {
+	opacity: 1;
+	transform: translateX(0);
+	z-index: 1;
+}
+
+.slide.previous {
+	opacity: 0;
+	transform: translateX(-100%);
+	z-index: 0;
+}
+
+/* Touch indicator for mobile */
+.touch-indicator {
+	position: absolute;
+	bottom: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	color: white;
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 0.5rem 1rem;
+	border-radius: 1rem;
+	pointer-events: none;
+	z-index: 2;
+	backdrop-filter: blur(4px);
+	font-size: 0.875rem;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.touch-indicator.visible {
+	opacity: 1;
+	animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+	0%, 100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+}
+
+/* Navigation controls */
+.slideshow-container button {
+	z-index: 2;
+}
+
+.slideshow-container button:active {
+	transform: translateY(-50%) scale(0.95);
+}

@@ -1,0 +1,240 @@
+================================================================================
+                    LOOM METHOD - START HERE NOW
+================================================================================
+
+YOU CHOSE: LOOM (Easiest Method)
+TOTAL TIME: 15-20 minutes
+RESULT: Professional 8-10 minute video with shareable link
+
+================================================================================
+                        RIGHT NOW - 3 ACTIONS
+================================================================================
+
+ACTION 1: START YOUR WEBSITE (Open Terminal)
+────────────────────────────────────────────────
+
+Type this command:
+    npm start
+
+Wait for message:
+    "Compiled successfully!"
+    "Local: http://localhost:3000"
+
+✓ DONE - Keep terminal running
+
+---
+
+ACTION 2: OPEN NARRATION SCRIPT
+───────────────────────────────
+
+Open this file in your editor:
+    WEBSITE_NARRATION_SCRIPT.md
+
+OR print it: Print the document
+
+OR save to phone: Copy-paste to phone notes
+
+✓ DONE - Script is ready to read while recording
+
+---
+
+ACTION 3: GO TO LOOM.COM
+────────────────────────
+
+Visit: https://www.loom.com
+
+Sign up using:
+    [ ] Email address, OR
+    [ ] Google account
+
+Install Loom extension when prompted (takes 30 seconds)
+
+✓ DONE - Loom is ready
+
+================================================================================
+                    WHEN YOU'RE READY - RECORD
+================================================================================
+
+STEP 1: Click Loom icon (top-right browser corner)
+STEP 2: Click "Start recording"
+STEP 3: Select "Entire screen" and your microphone
+STEP 4: Click "Start recording" again
+
+Red recording indicator appears = RECORDING STARTED
+
+---
+
+STEP 5: READ NARRATION SCRIPT WHILE NAVIGATING
+    
+    Follow this timing:
+    
+    0:00-0:15   → Read INTRO, show homepage
+    0:15-1:15   → Read HOME PAGE section, scroll website
+    1:15-2:30   → Read ABOUT PAGE section, click About & scroll
+    2:30-3:20   → Read PROGRAMS section, click Programs
+    3:20-4:20   → Read OUR WORK section, click Our Work
+    4:20-5:30   → Read IMPACT section, click Impact
+    5:30-6:25   → Read NEWS section, click News
+    6:25-7:15   → Read CONTACT section, click Contact
+    7:15-8:30   → Read CLOSING, return to meaningful page
+
+---
+
+STEP 6: When done, click red recording indicator → "Stop recording"
+
+Loom will process automatically (takes 1-2 minutes)
+
+---
+
+STEP 7: Click "Share" → Copy the link
+
+Link looks like: https://www.loom.com/share/xxxxxxxxxxxxx
+
+---
+
+STEP 8: Send link to YNIS-RD team via email
+
+Subject: YNIS-RD Website Video Tour
+
+Message: I've created a professional video tour of the website. 
+Please review and share feedback. [LINK]
+
+================================================================================
+                        KEY REMINDERS
+================================================================================
+
+WHILE RECORDING:
+
+✓ Speak clearly and naturally (not too fast)
+✓ Use natural pauses between sentences
+✓ Emphasize important numbers: "Seventy-FIVE percent"
+✓ Smile while talking (affects your voice)
+✓ Take your time (don't rush)
+✓ If you mess up, pause 2 sec and repeat the sentence
+
+DON'T WORRY ABOUT:
+
+✗ Being perfect (first takes are usually fine)
+✗ Every single word matching script exactly
+✗ Slight pauses or hesitations
+✗ Background sounds (Loom can filter some)
+✗ Multiple takes (you can re-record)
+
+================================================================================
+                        WHAT YOU'LL SAY
+================================================================================
+
+INTRO (0:00-0:15):
+"Welcome to YNIS-RD website tour. I'll walk you through each page, 
+showing our mission, programs, and impact. Let's get started!"
+
+[Then navigate and show pages while reading relevant section from script]
+
+CLOSING (7:15-8:30):
+"Thank you for this tour of YNIS-RD website. For more information, 
+contact us through our website. Together, we're empowering youth."
+
+[Return to home page, end recording]
+
+(Full script in: WEBSITE_NARRATION_SCRIPT.md)
+
+================================================================================
+                        TIMING GUIDE
+================================================================================
+
+These are approximate - don't stress about exact seconds:
+
+Home Page:              60 seconds (scroll slowly)
+About Page:         4 minutes (large section with subsections)
+Programs:               50 seconds
+Our Work:               60 seconds
+Impact:              1.5 minutes
+News:                   55 seconds
+Contact:                50 seconds
+Intro + Closing:        35 seconds
+
+TOTAL:              8-10 minutes
+
+If you're within 8-10 minutes, you're perfect!
+
+================================================================================
+                        AFTER RECORDING
+================================================================================
+
+Once you stop recording:
+
+1. Loom processes your video (1-2 minutes - wait)
+
+2. When done, click "Share"
+
+3. Copy the link: https://www.loom.com/share/xxxxx
+
+4. Send via email to YNIS-RD team:
+
+   Subject: Website Video - Ready for Review
+   
+   Hi Team,
+   
+   I've recorded a professional tour of the YNIS-RD website.
+   Please watch and provide feedback.
+   
+   Link: [PASTE YOUR LINK]
+   
+   Thanks,
+   [Your Name]
+
+================================================================================
+                        QUICK CHECKLIST
+================================================================================
+
+Before Recording:
+  [ ] npm start (website running)
+  [ ] Microphone works
+  [ ] Script is ready
+  [ ] Room is quiet
+  [ ] Loom account created
+  [ ] Loom extension installed
+
+During Recording:
+  [ ] Reading narration script clearly
+  [ ] Showing all 10 website pages
+  [ ] Proper pacing (not too fast)
+  [ ] Good energy and enthusiasm
+
+After Recording:
+  [ ] Loom processed video (wait 1-2 min)
+  [ ] Got shareable link
+  [ ] Sent to YNIS-RD team
+  [ ] Got confirmation
+
+================================================================================
+                    THAT'S IT! YOU'RE DONE!
+================================================================================
+
+Timeline:
+  5 min  - Setup and preparation
+  10 min - Record your video
+  2 min  - Loom processes
+  3 min  - Share with team
+  ──────
+  20 min - TOTAL
+
+You'll have a professional website showcase video that took less than 
+a half hour and would normally cost $500-2000 to produce professionally!
+
+Questions? Check:
+  → LOOM_QUICK_GUIDE.md (detailed instructions)
+  → LOOM_RECORDING_CHECKLIST.txt (checklist version)
+  → WEBSITE_NARRATION_SCRIPT.md (what to say)
+
+Ready? 
+  1. Open terminal
+  2. Type: npm start
+  3. Go to: https://www.loom.com
+  4. Click "Start recording"
+  5. Read script and show pages
+  6. Share link when done
+
+LET'S GO! 🎬
+
+================================================================================

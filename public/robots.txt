@@ -1,0 +1,35 @@
+# YoNISeRD Website - Search Engine Configuration
+# https://www.robotstxt.org/
+
+User-agent: *
+Allow: /
+Disallow: /build/
+Disallow: /node_modules/
+Disallow: /.env*
+Disallow: /.*
+
+# Specific rules for common crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl delay (in seconds) - be respectful to server
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://youthnetworkonline.org/sitemap.xml
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /

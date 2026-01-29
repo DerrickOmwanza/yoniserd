@@ -1,0 +1,199 @@
+================================================================================
+  YNIS-RD WEBSITE VIDEO - RECORDING CHECKLIST
+================================================================================
+
+BEFORE STARTING RECORDING:
+
+TECHNICAL SETUP:
+  [ ] Website running (npm start in terminal)
+  [ ] Website loading at localhost:3000
+  [ ] Browser set to Full Screen (F11)
+  [ ] Screen resolution 1920x1080 (Full HD)
+  [ ] At least 1 GB free disk space
+  [ ] Recording software installed/ready (Loom/OBS/etc)
+
+AUDIO & MICROPHONE:
+  [ ] Microphone connected and working
+  [ ] Microphone tested (record 5 second test, listen back)
+  [ ] Microphone positioned 6-12 inches from mouth
+  [ ] Volume level appropriate (not too quiet, not too loud)
+  [ ] No nearby background noise sources
+
+ENVIRONMENT:
+  [ ] Door closed (quiet room)
+  [ ] Windows closed (no wind noise)
+  [ ] AC/Fans turned off
+  [ ] Phone on silent mode
+  [ ] Email/Slack notifications disabled
+  [ ] Pets/people warned not to interrupt
+  [ ] Good lighting (for any visible parts)
+  [ ] Second monitor/printout with script ready
+
+CONTENT PREPARATION:
+  [ ] WEBSITE_NARRATION_SCRIPT.md printed/on second screen
+  [ ] Know the key talking points for each page
+  [ ] Timing target: 40-60 seconds per page
+  [ ] Understand the flow: Home → About → Programs → Work → Impact → News → Contact
+  [ ] Know what to emphasize (numbers, achievements, calls-to-action)
+
+PERSONAL PREPARATION:
+  [ ] Well rested
+  [ ] Water nearby (for dry mouth)
+  [ ] Room temperature comfortable
+  [ ] Practiced reading script once
+  [ ] Mental note: Speak clearly, not too fast, natural pauses
+
+================================================================================
+
+DURING RECORDING:
+
+HOME PAGE (40-60 seconds)
+  [ ] Show banner at top
+  [ ] Narrate about mission
+  [ ] Scroll to statistics
+  [ ] Show program highlights
+  [ ] Scroll to impact metrics
+  [ ] Scroll to success stories
+  [ ] Scroll to values
+  [ ] End with visible CTA button
+
+ABOUT PAGE (75 seconds)
+  [ ] Navigate to About page successfully
+  [ ] Show Mission & Vision section (full screen)
+  [ ] Scroll to Organization Details
+  [ ] Show CEO section with photo
+  [ ] Show CEO message
+  [ ] Continue to Leadership Team
+  [ ] Show journey timeline
+  [ ] Scroll to Awards section
+  [ ] Show Impact Statistics
+  [ ] End with Values grid
+
+PROGRAMS PAGE (50 seconds)
+  [ ] Navigate to Programs
+  [ ] Show all 5 program cards clearly
+  [ ] Narrate about each program
+  [ ] Scroll to Partnerships section
+  [ ] Highlight partnership CTA
+
+OUR WORK PAGE (60 seconds)
+  [ ] Navigate to Our Work
+  [ ] Show photo gallery
+  [ ] Scroll through featured initiatives
+  [ ] Show metrics on initiative cards
+  [ ] Point out key statistics
+
+IMPACT PAGE (70 seconds)
+  [ ] Navigate to Impact
+  [ ] Show metrics animations
+  [ ] Scroll through impact areas
+  [ ] Show testimonials/voices
+  [ ] Scroll timeline
+  [ ] Show CTA section
+
+NEWS PAGE (55 seconds)
+  [ ] Navigate to News/Stories
+  [ ] Show story cards
+  [ ] Mention filter functionality
+  [ ] Highlight call-to-action
+
+CONTACT PAGE (50 seconds)
+  [ ] Navigate to Contact
+  [ ] Show contact form
+  [ ] Highlight contact info cards
+  [ ] Show volunteer opportunities
+  [ ] Emphasize email/phone
+
+CLOSING (20 seconds)
+  [ ] Return to meaningful page
+  [ ] Deliver strong closing statement
+  [ ] Pause at end (don't cut off abruptly)
+
+NARRATION QUALITY:
+  [ ] Speaking clearly and audibly
+  [ ] Pace is steady (120-150 words per minute)
+  [ ] Using natural pauses between sentences
+  [ ] Showing enthusiasm for the organization
+  [ ] Emphasizing important numbers/achievements
+  [ ] Not reading robotically
+  [ ] Breathing between major points
+  [ ] Recovery from any mistakes (pause and repeat)
+
+================================================================================
+
+AFTER RECORDING:
+
+POST-RECORDING:
+  [ ] Stopped recording successfully
+  [ ] File saved to appropriate location
+  [ ] Recording not corrupted (test play briefly)
+  [ ] Duration is 8-10 minutes
+  [ ] File size is reasonable (100-500 MB)
+
+AUDIO/VIDEO SYNC (if applicable):
+  [ ] Downloaded DaVinci Resolve or Kapwing
+  [ ] Imported video and audio files
+  [ ] Aligned audio to start correctly
+  [ ] No long silence at beginning
+  [ ] Audio level is consistent throughout
+  [ ] No audio dropout or glitches
+
+QUALITY CHECK:
+  [ ] Audio is clear (no background noise)
+  [ ] No distracting sounds (keyboard clicks, breathing, wind)
+  [ ] Video is smooth (no choppy frames)
+  [ ] Resolution looks good (not pixelated)
+  [ ] Text on pages is readable
+  [ ] Colors look natural
+  [ ] No audio-video sync issues (if separate recording)
+
+FINAL EXPORT:
+  [ ] Video format: MP4
+  [ ] Resolution: 1920x1080 (Full HD)
+  [ ] Frame rate: 30 fps
+  [ ] Quality: High
+  [ ] File name: YNIS_RD_Website_Tour.mp4
+  [ ] Location: Easy to find backup location
+
+BEFORE SHARING:
+  [ ] Watched entire video start to finish
+  [ ] Audio is synchronized with video
+  [ ] All 10 pages shown
+  [ ] Duration is 8-10 minutes
+  [ ] No sensitive information visible
+  [ ] Ready for stakeholders to view
+  [ ] File is backed up in 2 locations
+
+================================================================================
+
+SHARING PREPARATION:
+
+WHERE TO SHARE:
+  [ ] Decided on sharing method (Loom link / YouTube / Drive / Email)
+  [ ] Set up cloud storage if needed
+  [ ] Created sharing link
+  [ ] Tested link works
+  [ ] Written email/message to accompany video
+
+================================================================================
+
+FINAL STATUS:
+
+Date Completed: ________________
+
+Total Duration: _____________ minutes
+
+File Size: _____________ MB
+
+Shared Via: [ ] Loom  [ ] YouTube  [ ] Google Drive  [ ] Email
+
+Approval Status: [ ] Pending  [ ] Approved
+
+Ready for distribution: [ ] YES  [ ] NO
+
+================================================================================
+
+GREAT JOB! Your website showcase video is complete. 
+Ready to inspire stakeholders about YNIS-RD! 🎬
+
+================================================================================

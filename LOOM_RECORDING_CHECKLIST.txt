@@ -1,0 +1,341 @@
+================================================================================
+                    LOOM RECORDING - FINAL CHECKLIST
+================================================================================
+
+RIGHT NOW - PRE-RECORDING (10 minutes)
+
+TECHNICAL SETUP:
+  [ ] Website running: npm start (in terminal)
+  [ ] Website loads at: http://localhost:3000
+  [ ] Microphone connected and tested
+  [ ] Browser updated (for Loom compatibility)
+  [ ] At least 500 MB free disk space
+
+LOOM SETUP:
+  [ ] Visited: https://www.loom.com
+  [ ] Account created (email or Google)
+  [ ] Loom extension installed in browser
+  [ ] Extension showing in browser toolbar
+
+NARRATION SCRIPT:
+  [ ] WEBSITE_NARRATION_SCRIPT.md open or printed
+  [ ] Script is visible (on monitor or paper)
+  [ ] Read through once (familiar with flow)
+
+ENVIRONMENT:
+  [ ] Room is quiet (door closed)
+  [ ] Phone on silent
+  [ ] No AC/fans/background noise
+  [ ] Good lighting (optional)
+  [ ] Water nearby (optional)
+
+MINDSET:
+  [ ] Ready to speak naturally
+  [ ] Okay with first take (don't overthink)
+  [ ] Know: can retake if needed
+  [ ] Prepared to smile while speaking
+
+================================================================================
+
+RECORDING SESSION - STEP BY STEP
+
+STEP 1: LOOM START
+  [ ] Click Loom extension icon (top-right browser)
+  [ ] Click "Start recording" (red button)
+  [ ] Choose: "Entire screen"
+  [ ] Choose: Your microphone
+  [ ] Click: "Start recording"
+  [ ] Confirm: Red indicator showing (top-left corner)
+
+STEP 2: INTRO (0:00-0:15)
+  [ ] Homepage visible on screen
+  [ ] Read intro from script
+  [ ] Narration clear and audible
+  [ ] Speaking at natural pace
+
+STEP 3: HOME PAGE (0:15-1:15)
+  [ ] Scroll down slowly
+  [ ] Show banner, hero section
+  [ ] Show statistics section
+  [ ] Show program highlights
+  [ ] Show impact metrics
+  [ ] Show values grid
+  [ ] Narrate from script
+
+STEP 4: ABOUT PAGE (1:15-2:30)
+  [ ] Click "About" in navbar
+  [ ] Show mission section (large blue area)
+  [ ] Scroll to organization details
+  [ ] Show CEO section with photo
+  [ ] Scroll to leadership team
+  [ ] Show journey timeline
+  [ ] Show awards section
+  [ ] Show impact statistics
+  [ ] Show values
+
+STEP 5: PROGRAMS PAGE (2:30-3:20)
+  [ ] Click "Programs"
+  [ ] Show all 5 program cards visible
+  [ ] Read program descriptions
+  [ ] Scroll to partnerships section
+  [ ] Highlight partnership CTA
+
+STEP 6: OUR WORK PAGE (3:20-4:20)
+  [ ] Click "Our Work"
+  [ ] Show gallery section
+  [ ] Scroll through photo gallery
+  [ ] Show featured initiatives section
+  [ ] Point out metric cards
+
+STEP 7: IMPACT PAGE (4:20-5:30)
+  [ ] Click "Impact"
+  [ ] Show metrics (10,000+ youth, 50+ communities, etc.)
+  [ ] Scroll through impact areas
+  [ ] Show testimonials
+  [ ] Show timeline
+  [ ] Mention CTA
+
+STEP 8: NEWS PAGE (5:30-6:25)
+  [ ] Click "News" or "Stories"
+  [ ] Show story cards
+  [ ] Explain categories
+  [ ] Highlight featured stories
+  [ ] Show filtering
+
+STEP 9: CONTACT PAGE (6:25-7:15)
+  [ ] Click "Contact"
+  [ ] Show contact form
+  [ ] Show contact info cards (email, phone, location)
+  [ ] Show volunteer opportunities
+
+STEP 10: CLOSING (7:15-8:30)
+  [ ] Return to Home page (or meaningful page)
+  [ ] Read closing narration from script
+  [ ] End on strong visual
+  [ ] Leave recording rolling 1-2 seconds after ending
+
+NARRATION QUALITY CHECK:
+  [ ] Speaking clearly (not mumbling)
+  [ ] Pace is natural (120-150 words per minute)
+  [ ] Using natural pauses between sentences
+  [ ] Emphasizing key numbers (Seventy-FIVE percent)
+  [ ] Sounding genuine and enthusiastic
+  [ ] Not reading like robot
+  [ ] Recovering well from any mistakes
+
+TIMING CHECK:
+  [ ] Total recording is 8-10 minutes
+  [ ] No long silences
+  [ ] Pacing feels right
+  [ ] All pages covered
+
+STEP 11: STOP RECORDING
+  [ ] Click red recording indicator (top-left)
+  [ ] Click "Stop recording"
+  [ ] Confirm: "Recording uploaded to Loom"
+
+================================================================================
+
+POST-RECORDING (2-3 minutes)
+
+LOOM PROCESSING:
+  [ ] Waited for Loom to process (1-2 minutes)
+  [ ] Video appeared in Loom dashboard
+  [ ] Page shows play button for video
+  [ ] Recording shows correct duration (8-10 min)
+
+QUALITY REVIEW:
+  [ ] Watched 30 seconds of video (spot check)
+  [ ] Audio is clear (not too quiet, not distorted)
+  [ ] Video quality looks good (sharp, not pixelated)
+  [ ] Website pages visible and readable
+  [ ] Narration audible and clear
+
+GET SHARE LINK:
+  [ ] Clicked "Share" button
+  [ ] Copied shareable link: https://www.loom.com/share/...
+  [ ] Tested link (optional - open in new tab)
+  [ ] Link opens video (not error page)
+
+SAVE LINK:
+  [ ] Copied link to email draft (don't lose it!)
+  [ ] Saved link in text file: YNIS_RD_VIDEO_LINK.txt
+  [ ] Or pasted in email ready to send
+
+================================================================================
+
+QUALITY CHECKLIST - BEFORE SENDING
+
+VIDEO QUALITY:
+  [ ] Duration is 8-10 minutes
+  [ ] All 10 pages shown
+  [ ] Video resolution looks professional
+  [ ] No choppy/skipped frames
+  [ ] Brightness and colors look good
+
+AUDIO QUALITY:
+  [ ] Narration is clear and audible
+  [ ] No background noise detected
+  [ ] Volume is consistent throughout
+  [ ] No audio dropouts
+  [ ] Microphone didn't peak/distort
+
+CONTENT QUALITY:
+  [ ] Website pages all visible
+  [ ] Text on pages readable
+  [ ] Navigation smooth
+  [ ] Narration matches pages being shown
+  [ ] No long awkward silences
+  [ ] Professional appearance overall
+
+COMPLETENESS:
+  [ ] Introduction included
+  [ ] All 10 pages shown:
+      [ ] Home Page
+      [ ] About Page (full)
+      [ ] Programs
+      [ ] Our Work
+      [ ] Impact
+      [ ] News
+      [ ] Contact
+  [ ] Closing statement included
+  [ ] Smooth transitions between pages
+
+================================================================================
+
+READY TO SHARE
+
+COMPOSE EMAIL:
+
+To: [YNIS-RD Leadership]
+Subject: YNIS-RD Website Video Tour - Review Requested
+
+Hi [Team Name],
+
+I've completed a professional video walkthrough of the YNIS-RD website. 
+Please watch and provide feedback.
+
+VIDEO LINK: [paste your Loom share link]
+
+The video includes:
+✓ All 10 website pages
+✓ Professional audio narration
+✓ 8-10 minute comprehensive tour
+✓ Complete organizational overview
+
+Please review and let me know if any changes are needed.
+
+Thanks,
+[Your Name]
+
+---
+
+SENDING OPTIONS:
+  [ ] Email to leadership
+  [ ] Slack/Teams message
+  [ ] WhatsApp group
+  [ ] Drive link (optional download)
+
+SEND:
+  [ ] Email/message sent
+  [ ] Waiting for feedback
+  [ ] Note received confirmation
+
+================================================================================
+
+AFTER FEEDBACK (If needed)
+
+IF CHANGES REQUESTED:
+  [ ] Note the specific changes
+  [ ] Return to Loom
+  [ ] You can re-record or retake sections
+  [ ] Update video accordingly
+  [ ] Get new share link
+  [ ] Send updated link
+
+IF APPROVED:
+  [ ] Mark as complete! ✓
+  [ ] Can now share with broader stakeholders
+  [ ] Can embed on website (if desired)
+  [ ] Can post on LinkedIn/social media
+  [ ] Celebrate completion! 🎉
+
+================================================================================
+
+FINAL STATUS
+
+Date Recorded: _______________
+
+Duration: _____________ minutes (should be 8-10)
+
+Video Link: https://www.loom.com/share/_____________________
+
+Feedback Status: [ ] Pending  [ ] Approved  [ ] Needs Changes
+
+Approval Date: _______________
+
+Ready for wider distribution: [ ] YES  [ ] NO
+
+Notes: ________________________________________________________________
+________________________________________________________________
+
+================================================================================
+
+TROUBLESHOOTING (If issues occur)
+
+ISSUE: "Microphone not working"
+ACTION: 
+  [ ] Check browser permissions (allow microphone)
+  [ ] Check Windows sound settings
+  [ ] Unplug/replug microphone
+  [ ] Restart browser
+  [ ] Restart computer
+
+ISSUE: "Website not loading at localhost:3000"
+ACTION:
+  [ ] Confirm npm start is still running
+  [ ] Try: npm start again in terminal
+  [ ] Check terminal for error messages
+  [ ] Try different port if suggested
+
+ISSUE: "Loom extension not showing"
+ACTION:
+  [ ] Reinstall Loom extension
+  [ ] Check browser compatibility
+  [ ] Try different browser (Chrome recommended)
+
+ISSUE: "Recording keeps stopping"
+ACTION:
+  [ ] Check internet connection
+  [ ] Check RAM (close other apps)
+  [ ] Restart browser
+  [ ] Restart computer
+  [ ] Try again
+
+ISSUE: "Audio is too quiet/loud"
+ACTION:
+  [ ] Check microphone input level
+  [ ] Move mic closer to mouth (not too close)
+  [ ] Check system volume
+  [ ] Re-record if necessary (Loom saves multiple recordings)
+
+================================================================================
+
+✅ CONGRATULATIONS!
+
+You've successfully:
+  ✓ Recorded a professional website video
+  ✓ Created 8-10 minutes of content
+  ✓ Showcased all 10 website pages
+  ✓ Provided clear narration
+  ✓ Generated shareable link
+  ✓ Delivered professional deliverable
+
+TIME INVESTED: ~20-30 minutes
+VALUE CREATED: $500-2000 worth of video production
+
+NEXT STEPS: Wait for feedback, then share with stakeholders!
+
+You're done! 🎉🎬
+
+================================================================================
