@@ -2,7 +2,7 @@
 export const CONTACT_INFO = {
     location: 'Kisii, Kenya',
     email: 'youthnetwork4@gmail.com',
-    phone: '+254 7XX XXX XXX',
+    phone: '+254 725 451 006',
 };
 
 // Social Media Links
