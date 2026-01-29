@@ -356,7 +356,8 @@ const About = () => {
                                       className="w-32 h-32 rounded-full object-cover mb-6 shadow-md border-4"
                                       style={{ borderColor: '#7BBBFF' }}
                                   />
-                                  <h3 className="text-2xl font-bold mb-4" style={{ color: '#050F2A' }}>Programme Officer</h3>
+                                  <h3 className="text-2xl font-bold mb-2" style={{ color: '#050F2A' }}>Catherine Ngotho</h3>
+                                  <p className="text-lg font-semibold mb-2" style={{ color: '#050F2A' }}>Programme Officer</p>
                                   <p className="text-lg leading-relaxed" style={{ color: '#050F2A' }}>Oversight of program design, implementation, and community partnerships</p>
                               </div>
 
