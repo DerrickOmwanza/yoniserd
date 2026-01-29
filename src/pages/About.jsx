@@ -5,6 +5,7 @@ import { ORG_INFO, CORE_VALUES, CEO_INFO, MANAGING_DIRECTOR_INFO } from '../cons
 import ceo from '../assets/ceo.png';
 import managingDirector from '../assets/Managing Director.jpg';
 import fieldOfficer from '../assets/Field Officer.jpg';
+import programmeOfficer from '../assets/programme officer.jpeg';
 import certificate from '../assets/gallery11.jpg';
 
 const About = () => {
@@ -344,15 +345,20 @@ const About = () => {
                                  <p className="text-lg leading-relaxed" style={{ color: '#050F2A' }}>{MANAGING_DIRECTOR_INFO.description}</p>
                              </div>
 
-                             {/* Programme Officer Card */}
-                             <div
-                                 className="rounded-2xl p-10 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col items-center text-center"
-                                 style={{ backgroundColor: '#F2FDFF' }}
-                             >
-                                 <div className="text-6xl mb-6">📋</div>
-                                 <h3 className="text-2xl font-bold mb-4" style={{ color: '#050F2A' }}>Programme Officer</h3>
-                                 <p className="text-lg leading-relaxed" style={{ color: '#050F2A' }}>Oversight of program design, implementation, and community partnerships</p>
-                             </div>
+                             {/* Programme Officer Card with Photo */}
+                              <div
+                                  className="rounded-2xl p-10 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col items-center text-center"
+                                  style={{ backgroundColor: '#F2FDFF' }}
+                              >
+                                  <img
+                                      src={programmeOfficer}
+                                      alt="Programme Officer"
+                                      className="w-32 h-32 rounded-full object-cover mb-6 shadow-md border-4"
+                                      style={{ borderColor: '#7BBBFF' }}
+                                  />
+                                  <h3 className="text-2xl font-bold mb-4" style={{ color: '#050F2A' }}>Programme Officer</h3>
+                                  <p className="text-lg leading-relaxed" style={{ color: '#050F2A' }}>Oversight of program design, implementation, and community partnerships</p>
+                              </div>
 
                              {/* Field Officer Card with Photo */}
                              <div
