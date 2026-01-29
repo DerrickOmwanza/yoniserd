@@ -9,7 +9,7 @@ export const CONTACT_INFO = {
 export const SOCIAL_LINKS = {
     linkedin: 'https://www.linkedin.com/company/youth-network-integrated-services-for-research-and-development/',
     twitter: 'https://twitter.com',
-    instagram: 'https://instagram.com',
+    instagram: 'https://www.instagram.com/yoniserd6?igsh=YmFxY2dzZ3BtbTFp',
     facebook: 'https://facebook.com',
 };
 
