@@ -56,3 +56,23 @@ export const CORE_VALUES = [
     'Knowledge Sharing',
 ];
 
+// Board Member 1 Information
+export const BOARD_MEMBER_1_INFO = {
+    name: 'Mukolwe Alubokho Patrick',
+    title: 'Board Member',
+    description: 'BSc in Quantitative Economics from Makerere University, with expertise in economic planning, policy development and strategy implementation for gender mainstreaming, children, youth, persons with disability, elderly  and marginalized communities. He optimizes program outcomes through resource mobilization, data-driven decision-making and stakeholder engagement, complemented by advocacy, lobbying and community outreaches to achieve impactful results in community development.',
+};
+
+// Board Member 2 Information
+export const BOARD_MEMBER_2_INFO = {
+    name: 'EUGENE GWAYA',
+    title: 'Board Member',
+    description: 'Mental health advocate and Sexual Reproductive Health Advocate',
+};
+
+// Programme Officer 2 Information
+export const PROGRAMME_OFFICER_2_INFO = {
+    name: 'Programme Officer',
+    title: 'Programme Officer',
+    description: 'Responsible for assisting in the planning, implementation, and monitoring of various programs and projects.',
+};

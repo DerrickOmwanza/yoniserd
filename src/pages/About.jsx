@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
-import { ORG_INFO, CORE_VALUES, CEO_INFO, MANAGING_DIRECTOR_INFO } from '../constants';
+import { ORG_INFO, CORE_VALUES, CEO_INFO, MANAGING_DIRECTOR_INFO, BOARD_MEMBER_1_INFO, BOARD_MEMBER_2_INFO, PROGRAMME_OFFICER_2_INFO } from '../constants';
 import ceo from '../assets/ceo.png';
 import managingDirector from '../assets/Managing Director.jpg';
 import fieldOfficer from '../assets/Field Officer.jpg';
 import programmeOfficer from '../assets/programme officer.jpeg';
 import certificate from '../assets/gallery11.jpg';
+import boardMember1 from '../assets/Board Member1.jpeg';
+import boardMember2 from '../assets/Board Member2.jpeg';
+import programmeOfficer2 from '../assets/programme officer2.jpeg';
 
 const About = () => {
     const [activeSection, setActiveSection] = useState('mission');
@@ -376,6 +379,54 @@ const About = () => {
                                  <p className="text-lg font-semibold mb-2" style={{ color: '#050F2A' }}>Field Officer</p>
                                  <p className="text-lg leading-relaxed" style={{ color: '#050F2A' }}>Direct community engagement and ground-level program execution</p>
                              </div>
+
+                             {/* Board Member 1 Card with Photo */}
+                            <div
+                                className="rounded-2xl p-10 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col items-center text-center"
+                                style={{ backgroundColor: '#F2FDFF' }}
+                            >
+                                <img
+                                    src={boardMember1}
+                                    alt="Board Member"
+                                    className="w-32 h-32 rounded-full object-cover mb-6 shadow-md border-4"
+                                    style={{ borderColor: '#7BBBFF' }}
+                                />
+                                <h3 className="text-2xl font-bold mb-2" style={{ color: '#050F2A' }}>{BOARD_MEMBER_1_INFO.name}</h3>
+                                <p className="text-lg font-semibold mb-2" style={{ color: '#050F2A' }}>{BOARD_MEMBER_1_INFO.title}</p>
+                                <p className="text-lg leading-relaxed" style={{ color: '#050F2A' }}>{BOARD_MEMBER_1_INFO.description}</p>
+                            </div>
+
+                            {/* Board Member 2 Card with Photo */}
+                            <div
+                                className="rounded-2xl p-10 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col items-center text-center"
+                                style={{ backgroundColor: '#F2FDFF' }}
+                            >
+                                <img
+                                    src={boardMember2}
+                                    alt="Board Member"
+                                    className="w-32 h-32 rounded-full object-cover mb-6 shadow-md border-4"
+                                    style={{ borderColor: '#7BBBFF' }}
+                                />
+                                <h3 className="text-2xl font-bold mb-2" style={{ color: '#050F2A' }}>{BOARD_MEMBER_2_INFO.name}</h3>
+                                <p className="text-lg font-semibold mb-2" style={{ color: '#050F2A' }}>{BOARD_MEMBER_2_INFO.title}</p>
+                                <p className="text-lg leading-relaxed" style={{ color: '#050F2A' }}>{BOARD_MEMBER_2_INFO.description}</p>
+                            </div>
+
+                            {/* Programme Officer 2 Card with Photo */}
+                            <div
+                                className="rounded-2xl p-10 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col items-center text-center"
+                                style={{ backgroundColor: '#F2FDFF' }}
+                            >
+                                <img
+                                    src={programmeOfficer2}
+                                    alt="Programme Officer"
+                                    className="w-32 h-32 rounded-full object-cover mb-6 shadow-md border-4"
+                                    style={{ borderColor: '#7BBBFF' }}
+                                />
+                                <h3 className="text-2xl font-bold mb-2" style={{ color: '#050F2A' }}>{PROGRAMME_OFFICER_2_INFO.name}</h3>
+                                <p className="text-lg font-semibold mb-2" style={{ color: '#050F2A' }}>{PROGRAMME_OFFICER_2_INFO.title}</p>
+                                <p className="text-lg leading-relaxed" style={{ color: '#050F2A' }}>{PROGRAMME_OFFICER_2_INFO.description}</p>
+                            </div>
                          </div>
                     </div>
                 </section>
