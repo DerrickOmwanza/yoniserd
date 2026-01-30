@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
@@ -42,6 +42,18 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
 
   const handleMobileToggle = (label) => {
     setMobileDropdowns((prev) => ({
@@ -136,38 +148,79 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation Menu */}
+      {/* Mobile Navigation - Slide-in Drawer */}
+      {/* Backdrop overlay */}
+      <div
+        className={`fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity duration-300 ${
+          isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={closeMenu}
+        aria-hidden="true"
+      />
+
+      {/* Slide-in drawer panel */}
       <div
         id="mobile-menu"
-        className={`lg:hidden mobile-menu overflow-hidden transition-all duration-300 ease-in-out ${
-          isMenuOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+        className={`fixed top-0 right-0 h-full w-[70%] max-w-sm bg-white shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-out ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
+        role="dialog"
+        aria-label="Mobile navigation menu"
+        aria-modal="true"
       >
-        <div className="flex flex-col gap-2 py-4 px-1">
+        {/* Close button */}
+        <div className="flex justify-end p-4 border-b border-slate-200">
+          <button
+            type="button"
+            onClick={closeMenu}
+            className="p-2 rounded-full hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-colors"
+            aria-label="Close navigation menu"
+          >
+            <svg
+              className="w-6 h-6 text-slate-600"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile menu content */}
+        <div className="flex flex-col gap-2 py-4 px-4 overflow-y-auto h-[calc(100%-64px)]">
           {dropdownMenus.map((menu) => (
             <div key={menu.label}>
               <button
                 type="button"
-                className="px-3 py-2 w-full text-left rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-all duration-200"
+                className="px-3 py-3 w-full text-left rounded-lg hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-all duration-200 flex items-center justify-between"
                 onClick={() => handleMobileToggle(menu.label)}
                 aria-expanded={Boolean(mobileDropdowns[menu.label])}
               >
-                <span>{menu.label}</span>
+                <span className="text-slate-800 font-medium">{menu.label}</span>
                 <svg
-                  className={`w-4 h-4 transition-transform ${mobileDropdowns[menu.label] ? 'rotate-180' : ''}`}
+                  className={`w-5 h-5 text-slate-500 transition-transform ${mobileDropdowns[menu.label] ? 'rotate-180' : ''}`}
                   viewBox="0 0 20 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M5 7L10 12L15 7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M5 7l5 5 5-5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </button>
               {mobileDropdowns[menu.label] && (
-                <div className="mobile-dropdown">
+                <div className="mobile-dropdown ml-4 mt-1">
                   {menu.items.map((item) => (
-                    <NavLink key={item.label} to={item.to} onClick={closeMenu}>
-                      <strong className="block uppercase text-sm">{item.label}</strong>
-                      <span className="text-xs text-slate-600">{item.description}</span>
+                    <NavLink
+                      key={item.label}
+                      to={item.to}
+                      onClick={closeMenu}
+                      className="block px-4 py-3 rounded-lg hover:bg-slate-50 transition-colors"
+                    >
+                      <strong className="block text-slate-800 text-sm">{item.label}</strong>
+                      <span className="text-xs text-slate-500">{item.description}</span>
                     </NavLink>
                   ))}
                 </div>
@@ -176,7 +229,12 @@ const Navbar = () => {
           ))}
 
           {simpleLinks.map((link) => (
-            <NavLink key={link.label} to={link.to} className="px-3 py-2 font-semibold uppercase tracking-[0.2em]" onClick={closeMenu}>
+            <NavLink
+              key={link.label}
+              to={link.to}
+              className="px-3 py-3 font-medium text-slate-800 rounded-lg hover:bg-slate-50 transition-colors"
+              onClick={closeMenu}
+            >
               {link.label}
             </NavLink>
           ))}

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 
 const SLIDE_INTERVAL = 8000; // 8 seconds - slower on mobile for better performance
 
-const ImageSlideshow = ({ images, descriptions, containerHeight = "h-64 sm:h-72 md:h-[480px]" }) => {
+const ImageSlideshow = ({ images, descriptions, containerHeight = "h-64 sm:h-72 md:h-[480px]", onSlideChange }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState('next');
   const timerRef = useRef(null);
@@ -31,6 +31,13 @@ const ImageSlideshow = ({ images, descriptions, containerHeight = "h-64 sm:h-72 
       }
     };
   }, [resetTimer]);
+
+  // Notify parent when slide changes
+  useEffect(() => {
+    if (onSlideChange) {
+      onSlideChange(currentIndex);
+    }
+  }, [currentIndex, onSlideChange]);
 
   // Simplified navigation without complex state
   const goToNext = useCallback(() => {
