@@ -1,0 +1,161 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                   QUICK START: DEPLOY TO GITHUB PAGES                      ║
+║                                                                            ║
+║                          3 MINUTES TO LIVE! 🚀                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+STEP 1: DEPLOY (Terminal)
+─────────────────────────────────────────────────────────────────────────────
+
+Open Terminal/PowerShell and run:
+
+    npm run deploy
+
+✓ This builds your app and uploads it to GitHub Pages
+✓ Wait for "Published" message
+✓ Takes about 30 seconds to 2 minutes
+
+
+STEP 2: CONFIGURE GITHUB (Browser)
+─────────────────────────────────────────────────────────────────────────────
+
+Go to your GitHub repo settings:
+  https://github.com/DerrickOmwanza/ynis-rd-website/settings/pages
+
+Look for "Build and deployment" section:
+  1. Select Branch: gh-pages
+  2. Select Folder: / (root)
+  3. Click Save
+
+✓ GitHub starts serving your site
+✓ This is automatic after Step 1
+
+
+STEP 3: VISIT YOUR LIVE SITE
+─────────────────────────────────────────────────────────────────────────────
+
+Open your browser to:
+
+    https://derrickomwanza.github.io/ynis-rd-website
+
+✓ Site should be live in 1-2 minutes
+✓ If blank: wait another minute and refresh
+✓ If broken: check the checklist below
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+QUICK TEST CHECKLIST
+─────────────────────────────────────────────────────────────────────────────
+
+[ ] Home page loads
+[ ] Click "About Us" → goes to About page
+[ ] Click "What We Do" → shows dropdown
+[ ] Click "Programs" under What We Do → goes to Programs
+[ ] Click "Gallery" → goes to Gallery page
+[ ] Mobile: Click hamburger menu → shows navigation links
+[ ] Mobile links have dark text (not invisible)
+[ ] Click "Contact" → goes to Contact page
+[ ] Footer loads
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+COMMON ISSUES & FIXES
+─────────────────────────────────────────────────────────────────────────────
+
+BLANK PAGE?
+  → Wait 2 minutes and refresh (Ctrl+F5)
+  → Check that gh-pages branch is selected in Settings
+
+BROKEN IMAGES/CSS?
+  → This was already fixed
+  → Refresh browser cache (Ctrl+Shift+Delete)
+
+NAVIGATION NOT WORKING?
+  → React Router was already configured
+  → Hard refresh: Ctrl+Shift+Delete (clear cache) then F5
+
+404 ERROR?
+  → GitHub Pages is still processing
+  → Wait up to 5 minutes
+  → Refresh browser
+
+MOBILE MENU INVISIBLE?
+  → This was fixed in previous commits
+  → Hard refresh: Ctrl+Shift+Delete then F5
+  → Try in Incognito mode (Ctrl+Shift+N)
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+WHAT WAS ALREADY DONE FOR YOU
+─────────────────────────────────────────────────────────────────────────────
+
+✅ Installed gh-pages package
+✅ Updated package.json with deployment scripts
+✅ Fixed React Router for GitHub Pages (basename)
+✅ Tested build process (successful)
+✅ Fixed all mobile navigation issues
+✅ Fixed navbar visibility
+✅ Created deployment documentation
+✅ Everything committed to GitHub
+
+YOU JUST NEED TO:
+1. Run: npm run deploy
+2. Configure GitHub Pages settings
+3. Wait 1-2 minutes
+4. Visit your live site!
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+WHAT'S YOUR LIVE URL?
+─────────────────────────────────────────────────────────────────────────────
+
+    https://derrickomwanza.github.io/ynis-rd-website
+
+Share this with anyone who wants to see your site!
+
+You also still have Netlify active:
+    https://yoniserd.netlify.app
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+AFTER IT'S LIVE: MAKING FUTURE UPDATES
+─────────────────────────────────────────────────────────────────────────────
+
+Every time you want to update your live site:
+
+    git add .
+    git commit -m "description of changes"
+    git push origin main
+    npm run deploy
+
+That's it! Live in 1-2 minutes.
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+NEED MORE INFO?
+─────────────────────────────────────────────────────────────────────────────
+
+Read these files in your repository:
+
+1. DEPLOYMENT_SUMMARY.txt     ← Full overview
+2. READY_TO_DEPLOY.md         ← Quick guide
+3. DEPLOYMENT_CHECKLIST.md    ← Detailed checklist
+4. GITHUB_PAGES_DEPLOYMENT_GUIDE.md ← Full reference
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+YOU'RE ALL SET! 🎉
+
+Just run: npm run deploy
+
+Your site will be live in minutes!
+
+═════════════════════════════════════════════════════════════════════════════
