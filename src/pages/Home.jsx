@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
 import OptimizedImageSlideshow from '../components/OptimizedImageSlideshow';
 import OptimizedImpactMetrics from '../components/OptimizedImpactMetrics';
+import MobileOptimizedImageSlideshow from '../components/MobileOptimizedImageSlideshow';
+import MobileOptimizedImpactMetrics from '../components/MobileOptimizedImpactMetrics';
+import { isMobileDevice } from '../utils/mobileOptimization';
 import { ORG_INFO, CORE_VALUES } from '../constants';
 import heroImage from '../assets/gallery4.jpg';
 import bannerImage from '../assets/gallery10.jpg';
@@ -14,6 +17,11 @@ import img5 from '../assets/gallery5.jpg';
 import img6 from '../assets/gallery6.jpg';
 
 const Home = () => {
+    // Use mobile-optimized components on mobile devices
+    const isMobile = useMemo(() => isMobileDevice(), []);
+    const ImageSlideshowComponent = isMobile ? MobileOptimizedImageSlideshow : OptimizedImageSlideshow;
+    const ImpactMetricsComponent = isMobile ? MobileOptimizedImpactMetrics : OptimizedImpactMetrics;
+
     const homeImages = [img1, img2, img3, img4, img5, img6];
     const homeDescriptions = [
         'Community outreach and youth empowerment initiatives',
@@ -164,7 +172,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="highlight-card">
-                                 <OptimizedImageSlideshow
+                                 <ImageSlideshowComponent
                                      images={homeImages.slice(0, 3)}
                                      descriptions={homeDescriptions.slice(0, 3)}
                                      containerHeight="h-64 sm:h-72"
@@ -200,7 +208,7 @@ const Home = () => {
 
                 {/* Impact Metrics */}
                  <section id="impact">
-                     <OptimizedImpactMetrics />
+                     <ImpactMetricsComponent />
                  </section>
 
                 {/* Stories / News */}
