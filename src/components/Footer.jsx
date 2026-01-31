@@ -96,7 +96,7 @@ const Footer = () => {
                 className="inline-flex items-center justify-center w-12 h-12 bg-white/15 hover:bg-white/25 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white shadow-lg hover:shadow-xl hover:scale-110"
               >
                 <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.38-7.03-6.14 7.03H1.412l7.773-8.877L1.227 2.25h8.506l5.037 6.828 5.744-6.828zM17.15 18.75h1.829L5.293 3.688H3.622l13.528 15.062z"/>
+                  <path d="M 6 4 L 18.5 18.5 M 18.5 4 L 6 18.5" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
                 </svg>
               </a>
               <a
