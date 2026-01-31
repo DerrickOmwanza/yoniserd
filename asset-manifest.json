@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/yoniserd/static/css/main.ad19381e.css",
-    "main.js": "/yoniserd/static/js/main.6710da39.js",
+    "main.css": "/yoniserd/static/css/main.37b75c2e.css",
+    "main.js": "/yoniserd/static/js/main.b161cfee.js",
     "static/js/453.331343f8.chunk.js": "/yoniserd/static/js/453.331343f8.chunk.js",
     "static/media/video5.mp4": "/yoniserd/static/media/video5.39f3acf2784dbcd1d879.mp4",
     "static/media/video4.mp4": "/yoniserd/static/media/video4.4422c662d1dfbfc59733.mp4",
@@ -30,12 +30,12 @@
     "static/media/Field Officer.jpg": "/yoniserd/static/media/Field Officer.267043daa16594879505.jpg",
     "static/media/ceo.png": "/yoniserd/static/media/ceo.342294a6881b77fc4d41.png",
     "index.html": "/yoniserd/index.html",
-    "main.ad19381e.css.map": "/yoniserd/static/css/main.ad19381e.css.map",
-    "main.6710da39.js.map": "/yoniserd/static/js/main.6710da39.js.map",
+    "main.37b75c2e.css.map": "/yoniserd/static/css/main.37b75c2e.css.map",
+    "main.b161cfee.js.map": "/yoniserd/static/js/main.b161cfee.js.map",
     "453.331343f8.chunk.js.map": "/yoniserd/static/js/453.331343f8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad19381e.css",
-    "static/js/main.6710da39.js"
+    "static/css/main.37b75c2e.css",
+    "static/js/main.b161cfee.js"
   ]
 }
