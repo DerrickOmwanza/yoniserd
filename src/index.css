@@ -696,12 +696,7 @@ select:focus-visible {
 	outline-offset: 4px;
 }
 
-/* Navbar background variant using the theme */
-.navbar-bg {
-	background: rgba(6, 20, 27, 0.85);
-	backdrop-filter: blur(10px);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
+
 
 /* --- Enhanced background palettes using the new color scheme --- */
 /* Ocean gradient: Dark navy to teal - for hero sections */
