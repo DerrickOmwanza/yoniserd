@@ -540,19 +540,32 @@ footer address {
 }
 
 .btn-alt {
-	border: 2px solid #fff;
-	color: #fff;
+	border: 2px solid var(--primary-dark);
+	color: var(--primary-dark);
+	background: transparent;
 	padding: 0.6rem 1.75rem;
 	border-radius: 999px;
 	font-weight: 700;
 	letter-spacing: 0.05em;
-	transition: background var(--transition-fast), color var(--transition-fast), border var(--transition-fast);
+	transition: background var(--transition-fast), color var(--transition-fast), border var(--transition-fast), box-shadow var(--transition-fast);
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .btn-alt:hover {
-	background: #fff;
-	color: var(--crimson-deep);
-	border-color: #fff;
+	background: var(--primary-dark);
+	color: #fff;
+	border-color: var(--primary-dark);
+	box-shadow: 0 4px 12px rgba(5, 15, 42, 0.2);
+	transform: translateY(-2px);
+}
+
+.btn-alt:focus,
+.btn-alt:focus-visible {
+	outline: 2px solid var(--primary-blue);
+	outline-offset: 2px;
 }
 
 /* Improved heading typography with responsive scaling */
