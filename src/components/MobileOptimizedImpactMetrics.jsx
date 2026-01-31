@@ -8,11 +8,13 @@ import { getCounterAnimationDuration, shouldReduceMotion } from '../utils/mobile
  * - Optimized for mobile CPU/GPU
  */
 const MobileOptimizedImpactMetrics = memo(() => {
+  // Show numbers immediately, animate from 0
   const [counts, setCounts] = useState({
     youth: 0,
     communities: 0,
     programs: 0,
   });
+  const [isVisible, setIsVisible] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef(null);
   const animationFrameRef = useRef(null);
@@ -31,64 +33,80 @@ const MobileOptimizedImpactMetrics = memo(() => {
     []
   );
 
-  // Intersection Observer with mobile-optimized options
+  // Aggressive Intersection Observer - triggers immediately when ANY part visible
    // eslint-disable-next-line react-hooks/exhaustive-deps
    useEffect(() => {
+     // Note: animateCounters is intentionally not in deps as it changes on every render
+     // We only want to trigger animation once when section becomes visible
      const currentRef = sectionRef.current;
+     if (!currentRef) return;
+
      const observer = new IntersectionObserver(
        ([entry]) => {
-         if (entry.isIntersecting && !hasAnimated) {
-           setHasAnimated(true);
-           animateCounters();
+         if (entry.isIntersecting) {
+           setIsVisible(true);
+           
+           // Trigger animation immediately when section becomes visible
+           if (!hasAnimated) {
+             setHasAnimated(true);
+             // Small delay to ensure state updates
+             setTimeout(() => {
+               animateCounters();
+             }, 50);
+           }
+         } else {
+           setIsVisible(false);
          }
        },
-      {
-        threshold: 0.3,
-        rootMargin: '100px', // Start sooner on mobile
-      }
-    );
+       {
+         threshold: 0, // Trigger when ANY part is visible (0%)
+         rootMargin: '50px', // Start loading 50px before visible
+       }
+     );
 
-    if (currentRef) observer.observe(currentRef);
+     observer.observe(currentRef);
 
-    return () => {
-      if (currentRef) observer.unobserve(currentRef);
-    };
-  }, [hasAnimated]);
+     return () => {
+       observer.unobserve(currentRef);
+     };
+   }, [hasAnimated]);
 
-  // Optimized counter animation
-  const animateCounters = () => {
-    // Skip animation if reduced motion is preferred
-    if (skipAnimation) {
-      setCounts({
-        youth: 10000,
-        communities: 50,
-        programs: 15,
-      });
-      return;
-    }
+  // Optimized counter animation with immediate visible values
+   const animateCounters = () => {
+     // Always show full values immediately on mobile to prevent blank section
+     setCounts({
+       youth: 10000,
+       communities: 50,
+       programs: 15,
+     });
 
-    const startTime = performance.now();
+     // Skip animation if reduced motion is preferred or on slow networks
+     if (skipAnimation) {
+       return;
+     }
 
-    const updateCounts = (currentTime) => {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / ANIMATION_DURATION, 1);
+     const startTime = performance.now();
 
-      // Use easing for smooth motion
-      const easeOutQuad = 1 - (1 - progress) * (1 - progress);
+     const updateCounts = (currentTime) => {
+       const elapsed = currentTime - startTime;
+       const progress = Math.min(elapsed / ANIMATION_DURATION, 1);
 
-      setCounts({
-        youth: Math.floor(10000 * easeOutQuad),
-        communities: Math.floor(50 * easeOutQuad),
-        programs: Math.floor(15 * easeOutQuad),
-      });
+       // Use easing for smooth motion
+       const easeOutQuad = 1 - (1 - progress) * (1 - progress);
 
-      if (progress < 1) {
-        animationFrameRef.current = requestAnimationFrame(updateCounts);
-      }
-    };
+       setCounts({
+         youth: Math.floor(10000 * easeOutQuad),
+         communities: Math.floor(50 * easeOutQuad),
+         programs: Math.floor(15 * easeOutQuad),
+       });
 
-    animationFrameRef.current = requestAnimationFrame(updateCounts);
-  };
+       if (progress < 1) {
+         animationFrameRef.current = requestAnimationFrame(updateCounts);
+       }
+     };
+
+     animationFrameRef.current = requestAnimationFrame(updateCounts);
+   };
 
   // Cleanup
   useEffect(() => {
@@ -124,19 +142,21 @@ const MobileOptimizedImpactMetrics = memo(() => {
               }}
             >
               <div
-                className="text-4xl md:text-7xl font-bold text-white-primary mb-2 md:mb-4"
-                style={{
-                  fontVariantNumeric: 'tabular-nums',
-                  minHeight: '3.5rem',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                {metric.key === 'youth' && `${counts.youth.toLocaleString()}+`}
-                {metric.key === 'communities' && `${counts.communities}+`}
-                {metric.key === 'programs' && counts.programs}
-              </div>
+                 className="text-4xl md:text-7xl font-bold text-white-primary mb-2 md:mb-4"
+                 style={{
+                   fontVariantNumeric: 'tabular-nums',
+                   minHeight: '3.5rem',
+                   display: 'flex',
+                   alignItems: 'center',
+                   justifyContent: 'center',
+                   opacity: isVisible ? 1 : 0.5,
+                   transition: 'opacity 0.3s ease-in-out',
+                 }}
+               >
+                 {metric.key === 'youth' && `${(counts.youth || 0).toLocaleString()}+`}
+                 {metric.key === 'communities' && `${counts.communities || 0}+`}
+                 {metric.key === 'programs' && (counts.programs || 0)}
+               </div>
               <p className="text-base md:text-2xl text-white-secondary font-semibold">
                 {metric.label}
               </p>
