@@ -220,10 +220,10 @@ const Navbar = () => {
                         closeMenu();
                         setMobileDropdowns({});
                       }}
-                      className="block px-4 py-3 rounded-lg hover:bg-slate-50 transition-colors"
+                      className="block w-full px-4 py-3 rounded-lg hover:bg-slate-100 transition-colors text-slate-800"
                     >
-                      <strong className="block text-slate-800 text-sm">{item.label}</strong>
-                      <span className="text-xs text-slate-500">{item.description}</span>
+                      <strong className="block text-slate-800 text-sm font-semibold">{item.label}</strong>
+                      <span className="text-xs text-slate-600">{item.description}</span>
                     </NavLink>
                   ))}
                 </div>
@@ -235,7 +235,7 @@ const Navbar = () => {
             <NavLink
               key={link.label}
               to={link.to}
-              className="px-3 py-3 font-medium text-slate-800 rounded-lg hover:bg-slate-50 transition-colors"
+              className="block w-full px-4 py-3 font-semibold text-slate-800 rounded-lg hover:bg-slate-100 transition-colors"
               onClick={() => {
                 closeMenu();
                 setMobileDropdowns({});
@@ -247,7 +247,7 @@ const Navbar = () => {
 
           <NavLink
             to="/contact"
-            className="brand-cta mt-4 inline-flex justify-center"
+            className="block w-full brand-cta mt-4 text-center py-3"
             onClick={() => {
               closeMenu();
               setMobileDropdowns({});
