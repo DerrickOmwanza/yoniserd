@@ -161,7 +161,7 @@ const Navbar = () => {
       {/* Slide-in drawer panel */}
       <div
         id="mobile-menu"
-        className={`fixed top-0 right-0 h-full w-[75%] max-w-xs bg-white shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-out flex flex-col ${
+        className={`fixed top-0 right-0 h-screen w-80 bg-white shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-out flex flex-col ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         role="dialog"
@@ -191,16 +191,16 @@ const Navbar = () => {
         </div>
 
         {/* Mobile menu content */}
-        <div className="flex-1 overflow-y-auto py-2 px-0">
+        <div className="flex-1 overflow-y-auto bg-white w-full">
           {dropdownMenus.map((menu) => (
             <div key={menu.label}>
               <button
                  type="button"
-                 className="w-full px-4 py-4 text-left bg-white hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-all duration-200 flex items-center justify-between border-b border-slate-200"
+                 className="w-full px-4 py-4 text-left bg-white hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-all duration-200 flex items-center justify-between border-b border-slate-200 cursor-pointer z-10 relative"
                  onClick={() => handleMobileToggle(menu.label)}
                  aria-expanded={Boolean(mobileDropdowns[menu.label])}
                >
-                 <span className="text-slate-900 font-bold text-base">{menu.label}</span>
+                 <span className="text-slate-900 font-bold text-base block">{menu.label}</span>
                 <svg
                   className={`w-5 h-5 text-slate-500 transition-transform ${mobileDropdowns[menu.label] ? 'rotate-180' : ''}`}
                   viewBox="0 0 20 20"
