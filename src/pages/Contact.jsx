@@ -114,12 +114,12 @@ const Contact = () => {
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 md:gap-12">
               {/* Contact Form */}
-              <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-10">
-                <h2 className="text-2xl md:text-3xl font-bold mb-8 text-gray-900">Send us a message</h2>
+              <div className="bg-gradient-to-br from-slate-900/95 to-slate-800/95 backdrop-blur-lg rounded-2xl shadow-2xl p-8 md:p-10 border border-white/10">
+                <h2 className="text-2xl md:text-3xl font-bold mb-8 text-white">Send us a message</h2>
 
                 {submitted && (
-                  <div className="mb-6 p-4 bg-green-50 border-2 border-green-300 rounded-lg">
-                    <p className="text-green-700 font-semibold flex items-center gap-2">
+                  <div className="mb-6 p-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border-2 border-green-400 rounded-lg animate-pulse">
+                    <p className="text-green-300 font-semibold flex items-center gap-2 text-lg">
                       <span className="text-2xl">✓</span> Thank you! We&apos;ll get back to you soon.
                     </p>
                   </div>
@@ -136,112 +136,112 @@ const Contact = () => {
                   <input type="hidden" name="form-name" value="contact-form" />
                   <input type="hidden" name="bot-field" />
                   {/* Name Field */}
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-gray-900 mb-2">
-                      Your Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="John Doe"
-                      className={`w-full px-4 py-3 rounded-lg border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-0 ${
-                        errors.name
-                          ? 'border-red-400 focus:ring-red-300 focus:border-red-400'
-                          : 'border-gray-300 focus:ring-blue-300 focus:border-blue-400'
-                      }`}
-                    />
+                   <div>
+                     <label htmlFor="name" className="block text-sm font-semibold text-white/90 mb-2">
+                       Your Name
+                     </label>
+                     <input
+                       type="text"
+                       id="name"
+                       name="name"
+                       value={formData.name}
+                       onChange={handleChange}
+                       placeholder="John Doe"
+                       className={`w-full px-4 py-3 rounded-lg border-2 bg-white/10 text-white placeholder-white/50 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-0 ${
+                         errors.name
+                           ? 'border-red-400 focus:ring-red-300 focus:border-red-400'
+                           : 'border-white/20 focus:ring-cyan-400/50 focus:border-cyan-400'
+                       }`}
+                     />
                     {errors.name && (
                       <p className="text-red-500 text-sm mt-1 font-medium">{errors.name}</p>
                     )}
                   </div>
 
                   {/* Email Field */}
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-gray-900 mb-2">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="your.email@example.com"
-                      className={`w-full px-4 py-3 rounded-lg border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-0 ${
-                        errors.email
-                          ? 'border-red-400 focus:ring-red-300 focus:border-red-400'
-                          : 'border-gray-300 focus:ring-blue-300 focus:border-blue-400'
-                      }`}
-                    />
+                   <div>
+                     <label htmlFor="email" className="block text-sm font-semibold text-white/90 mb-2">
+                       Email Address
+                     </label>
+                     <input
+                       type="email"
+                       id="email"
+                       name="email"
+                       value={formData.email}
+                       onChange={handleChange}
+                       placeholder="your.email@example.com"
+                       className={`w-full px-4 py-3 rounded-lg border-2 bg-white/10 text-white placeholder-white/50 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-0 ${
+                         errors.email
+                           ? 'border-red-400 focus:ring-red-300 focus:border-red-400'
+                           : 'border-white/20 focus:ring-cyan-400/50 focus:border-cyan-400'
+                       }`}
+                     />
                     {errors.email && (
                       <p className="text-red-500 text-sm mt-1 font-medium">{errors.email}</p>
                     )}
                   </div>
 
                   {/* Subject Field */}
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-semibold text-gray-900 mb-2">
-                      Subject
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      placeholder="e.g., Partnership inquiry, Volunteering opportunity"
-                      className={`w-full px-4 py-3 rounded-lg border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-0 ${
-                        errors.subject
-                          ? 'border-red-400 focus:ring-red-300 focus:border-red-400'
-                          : 'border-gray-300 focus:ring-blue-300 focus:border-blue-400'
-                      }`}
-                    />
+                   <div>
+                     <label htmlFor="subject" className="block text-sm font-semibold text-white/90 mb-2">
+                       Subject
+                     </label>
+                     <input
+                       type="text"
+                       id="subject"
+                       name="subject"
+                       value={formData.subject}
+                       onChange={handleChange}
+                       placeholder="e.g., Partnership inquiry, Volunteering opportunity"
+                       className={`w-full px-4 py-3 rounded-lg border-2 bg-white/10 text-white placeholder-white/50 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-0 ${
+                         errors.subject
+                           ? 'border-red-400 focus:ring-red-300 focus:border-red-400'
+                           : 'border-white/20 focus:ring-cyan-400/50 focus:border-cyan-400'
+                       }`}
+                     />
                     {errors.subject && (
                       <p className="text-red-500 text-sm mt-1 font-medium">{errors.subject}</p>
                     )}
                   </div>
 
                   {/* Message Field */}
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-gray-900 mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Tell us more about your inquiry..."
-                      rows="6"
-                      className={`w-full px-4 py-3 rounded-lg border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-0 resize-none ${
-                        errors.message
-                          ? 'border-red-400 focus:ring-red-300 focus:border-red-400'
-                          : 'border-gray-300 focus:ring-blue-300 focus:border-blue-400'
-                      }`}
-                    />
+                   <div>
+                     <label htmlFor="message" className="block text-sm font-semibold text-white/90 mb-2">
+                       Message
+                     </label>
+                     <textarea
+                       id="message"
+                       name="message"
+                       value={formData.message}
+                       onChange={handleChange}
+                       placeholder="Tell us more about your inquiry..."
+                       rows="6"
+                       className={`w-full px-4 py-3 rounded-lg border-2 bg-white/10 text-white placeholder-white/50 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-0 resize-none ${
+                         errors.message
+                           ? 'border-red-400 focus:ring-red-300 focus:border-red-400'
+                           : 'border-white/20 focus:ring-cyan-400/50 focus:border-cyan-400'
+                       }`}
+                     />
                     {errors.message && (
                       <p className="text-red-500 text-sm mt-1 font-medium">{errors.message}</p>
                     )}
                   </div>
 
                   {/* Submit Button */}
-                  <button
-                    type="submit"
-                    className="w-full bg-gray-900 hover:bg-black text-white font-black text-xl py-4 px-8 rounded-lg hover:shadow-2xl hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-gray-800 focus:ring-offset-2 cursor-pointer uppercase tracking-wider"
-                    style={{
-                      letterSpacing: '0.05em',
-                    }}
-                  >
-                    ✓ SEND MESSAGE
-                  </button>
-                </form>
+                   <button
+                     type="submit"
+                     className="w-full bg-gradient-to-r from-cyan-400 to-cyan-500 hover:from-cyan-300 hover:to-cyan-400 text-slate-900 font-black text-xl py-4 px-8 rounded-lg hover:shadow-2xl hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 cursor-pointer uppercase tracking-wider"
+                     style={{
+                       letterSpacing: '0.05em',
+                     }}
+                   >
+                     ✓ SEND MESSAGE
+                   </button>
+                  </form>
 
-                <p className="text-gray-600 text-sm mt-6 text-center">
-                  We typically respond within 24-48 hours during business days.
-                </p>
+                  <p className="text-white/70 text-sm mt-6 text-center">
+                   We typically respond within 24-48 hours during business days.
+                  </p>
               </div>
 
               {/* Contact Information */}
