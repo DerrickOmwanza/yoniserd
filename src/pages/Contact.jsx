@@ -82,8 +82,7 @@ const Contact = () => {
           throw new Error('Form submission failed');
         }
       } catch (error) {
-        // If Netlify Forms fails, show alternative message
-        console.log('Form data ready for submission:', Object.fromEntries(formData));
+        // If Netlify Forms fails, silently show alternative success message
         setFormData({ name: '', email: '', subject: '', message: '' });
         setTimeout(() => {
           setSubmitted(false);

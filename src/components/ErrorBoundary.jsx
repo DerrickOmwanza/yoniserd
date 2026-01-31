@@ -150,7 +150,7 @@ class ErrorBoundary extends React.Component {
               </button>
 
               <a
-                href="/"
+                href={process.env.PUBLIC_URL + '/'}
                 style={{
                   padding: '0.75rem 1.5rem',
                   backgroundColor: '#050F2A',
