@@ -15,7 +15,7 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="app-bg min-h-screen">
-        <Router>
+        <Router basename="/ynis-rd-website">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
