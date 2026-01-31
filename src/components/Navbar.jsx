@@ -151,7 +151,7 @@ const Navbar = () => {
       {/* Mobile Navigation - Slide-in Drawer */}
       {/* Backdrop overlay */}
       <div
-        className={`fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-black/60 z-40 lg:hidden transition-opacity duration-300 ${
           isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         onClick={closeMenu}
@@ -161,7 +161,7 @@ const Navbar = () => {
       {/* Slide-in drawer panel */}
       <div
         id="mobile-menu"
-        className={`fixed top-0 right-0 h-screen w-80 bg-white shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-out flex flex-col ${
+        className={`fixed top-0 right-0 h-screen w-80 bg-slate-900/90 backdrop-blur-lg shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-out flex flex-col border-l border-white/10 ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         role="dialog"
@@ -169,15 +169,15 @@ const Navbar = () => {
         aria-modal="true"
       >
         {/* Close button */}
-        <div className="flex flex-shrink-0 justify-end p-4 border-b border-slate-200">
+        <div className="flex flex-shrink-0 justify-end p-4 border-b border-white/10">
           <button
             type="button"
             onClick={closeMenu}
-            className="p-2 rounded-full hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-colors"
+            className="p-2 rounded-full hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-400 transition-colors"
             aria-label="Close navigation menu"
           >
             <svg
-              className="w-6 h-6 text-slate-600"
+              className="w-6 h-6 text-white"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -191,18 +191,18 @@ const Navbar = () => {
         </div>
 
         {/* Mobile menu content */}
-        <div className="flex-1 overflow-y-auto bg-white w-full">
+        <div className="flex-1 overflow-y-auto bg-transparent w-full">
           {dropdownMenus.map((menu) => (
             <div key={menu.label}>
               <button
                  type="button"
-                 className="w-full px-4 py-4 text-left bg-white hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-all duration-200 flex items-center justify-between border-b border-slate-200 cursor-pointer z-10 relative"
+                 className="w-full px-4 py-4 text-left bg-white/5 hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-400 transition-all duration-200 flex items-center justify-between border-b border-white/10 cursor-pointer z-10 relative"
                  onClick={() => handleMobileToggle(menu.label)}
                  aria-expanded={Boolean(mobileDropdowns[menu.label])}
                >
-                 <span className="text-slate-900 font-bold text-base block">{menu.label}</span>
-                <svg
-                  className={`w-5 h-5 text-slate-500 transition-transform ${mobileDropdowns[menu.label] ? 'rotate-180' : ''}`}
+                 <span className="text-white font-bold text-base block">{menu.label}</span>
+                 <svg
+                   className={`w-5 h-5 text-white/70 transition-transform ${mobileDropdowns[menu.label] ? 'rotate-180' : ''}`}
                   viewBox="0 0 20 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -220,10 +220,10 @@ const Navbar = () => {
                         closeMenu();
                         setMobileDropdowns({});
                       }}
-                      className="block w-full px-6 py-3 bg-slate-50 hover:bg-slate-100 transition-colors text-slate-800 border-b border-slate-200"
+                      className="block w-full px-6 py-3 bg-white/5 hover:bg-white/10 transition-colors text-white border-b border-white/10"
                     >
-                      <strong className="block text-slate-900 text-sm font-bold">{item.label}</strong>
-                      <span className="text-xs text-slate-700 block leading-tight">{item.description}</span>
+                      <strong className="block text-white text-sm font-bold">{item.label}</strong>
+                      <span className="text-xs text-white/70 block leading-tight">{item.description}</span>
                     </NavLink>
                   ))}
                 </div>
@@ -235,7 +235,7 @@ const Navbar = () => {
             <NavLink
               key={link.label}
               to={link.to}
-              className="block w-full px-4 py-4 font-bold text-slate-900 bg-white hover:bg-slate-100 transition-colors border-b border-slate-200 text-base"
+              className="block w-full px-4 py-4 font-bold text-white bg-white/5 hover:bg-white/15 transition-colors border-b border-white/10 text-base"
               onClick={() => {
                 closeMenu();
                 setMobileDropdowns({});
@@ -247,13 +247,13 @@ const Navbar = () => {
 
           <NavLink
             to="/contact"
-            className="block w-full brand-cta m-4 px-4 py-3 text-center font-bold text-base"
+            className="block w-full m-4 px-4 py-3 text-center font-bold text-base bg-cyan-400 text-slate-900 rounded-lg hover:bg-cyan-300 transition-colors"
             onClick={() => {
               closeMenu();
               setMobileDropdowns({});
             }}
           >
-            Contact
+            Contact Us
           </NavLink>
         </div>
       </div>
