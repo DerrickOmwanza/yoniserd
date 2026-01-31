@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
-import ImageSlideshow from '../components/ImageSlideshow';
-import ImpactMetrics from '../components/ImpactMetrics';
+import OptimizedImageSlideshow from '../components/OptimizedImageSlideshow';
+import OptimizedImpactMetrics from '../components/OptimizedImpactMetrics';
 import { ORG_INFO, CORE_VALUES } from '../constants';
 import heroImage from '../assets/gallery4.jpg';
 import bannerImage from '../assets/gallery10.jpg';
@@ -164,12 +164,12 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="highlight-card">
-                                <ImageSlideshow
-                                    images={homeImages.slice(0, 3)}
-                                    descriptions={homeDescriptions.slice(0, 3)}
-                                    containerHeight="h-64 sm:h-72"
-                                />
-                            </div>
+                                 <OptimizedImageSlideshow
+                                     images={homeImages.slice(0, 3)}
+                                     descriptions={homeDescriptions.slice(0, 3)}
+                                     containerHeight="h-64 sm:h-72"
+                                 />
+                             </div>
                         </div>
                     </div>
                 </section>
@@ -199,9 +199,9 @@ const Home = () => {
                 </section>
 
                 {/* Impact Metrics */}
-                <section id="impact">
-                    <ImpactMetrics />
-                </section>
+                 <section id="impact">
+                     <OptimizedImpactMetrics />
+                 </section>
 
                 {/* Stories / News */}
                 <section className="section-padded bg-light" id="news">
