@@ -216,7 +216,10 @@ const Navbar = () => {
                     <NavLink
                       key={item.label}
                       to={item.to}
-                      onClick={closeMenu}
+                      onClick={() => {
+                        closeMenu();
+                        setMobileDropdowns({});
+                      }}
                       className="block px-4 py-3 rounded-lg hover:bg-slate-50 transition-colors"
                     >
                       <strong className="block text-slate-800 text-sm">{item.label}</strong>
@@ -233,7 +236,10 @@ const Navbar = () => {
               key={link.label}
               to={link.to}
               className="px-3 py-3 font-medium text-slate-800 rounded-lg hover:bg-slate-50 transition-colors"
-              onClick={closeMenu}
+              onClick={() => {
+                closeMenu();
+                setMobileDropdowns({});
+              }}
             >
               {link.label}
             </NavLink>
@@ -242,7 +248,10 @@ const Navbar = () => {
           <NavLink
             to="/contact"
             className="brand-cta mt-4 inline-flex justify-center"
-            onClick={closeMenu}
+            onClick={() => {
+              closeMenu();
+              setMobileDropdowns({});
+            }}
           >
             Contact
           </NavLink>
