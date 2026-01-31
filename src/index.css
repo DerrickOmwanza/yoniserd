@@ -283,22 +283,25 @@ footer address {
 #mobile-menu {
 	display: flex;
 	flex-direction: column;
+	background-color: #ffffff;
 }
 
 /* Close button area */
 #mobile-menu > div:first-child {
 	flex-shrink: 0;
+	border-bottom: 1px solid #e5e7eb;
 }
 
 /* Main menu content area */
-#mobile-menu > div:last-child {
+#mobile-menu > div:nth-child(2) {
 	flex: 1;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
+	background-color: #ffffff;
 }
 
 .mobile-dropdown {
-	background: #f3f4f6;
+	background: #f9fafb;
 	border-left: 4px solid var(--primary-blue);
 	padding: 0;
 	display: flex;
@@ -311,17 +314,29 @@ footer address {
 .mobile-dropdown a {
 	display: block;
 	width: 100%;
-	padding: 1rem;
+	padding: 0.75rem 1rem;
 	color: #1f2937;
 	text-decoration: none;
-	font-size: 1rem;
+	font-size: 0.95rem;
 	transition: background-color 150ms ease;
 	border-bottom: 1px solid #e5e7eb;
 }
 
+.mobile-dropdown a strong {
+	color: #111827;
+	font-weight: 700;
+}
+
+.mobile-dropdown a span {
+	color: #6b7280;
+}
+
 .mobile-dropdown a:hover {
 	background-color: #e5e7eb;
-	color: #000;
+}
+
+.mobile-dropdown a:active {
+	background-color: #d1d5db;
 }
 
 #mobile-menu a {

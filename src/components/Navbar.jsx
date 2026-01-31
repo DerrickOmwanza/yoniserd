@@ -161,7 +161,7 @@ const Navbar = () => {
       {/* Slide-in drawer panel */}
       <div
         id="mobile-menu"
-        className={`fixed top-0 right-0 h-full w-[75%] max-w-xs bg-white shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-out overflow-y-auto ${
+        className={`fixed top-0 right-0 h-full w-[75%] max-w-xs bg-white shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-out flex flex-col ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         role="dialog"
@@ -169,7 +169,7 @@ const Navbar = () => {
         aria-modal="true"
       >
         {/* Close button */}
-        <div className="flex justify-end p-4 border-b border-slate-200">
+        <div className="flex flex-shrink-0 justify-end p-4 border-b border-slate-200">
           <button
             type="button"
             onClick={closeMenu}
@@ -191,16 +191,16 @@ const Navbar = () => {
         </div>
 
         {/* Mobile menu content */}
-        <div className="flex flex-col gap-0 py-4 px-2 overflow-y-auto flex-1">
+        <div className="flex-1 overflow-y-auto py-2 px-0">
           {dropdownMenus.map((menu) => (
             <div key={menu.label}>
               <button
-                type="button"
-                className="px-4 py-3 w-full text-left rounded-lg bg-white hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-all duration-200 flex items-center justify-between border-b border-slate-200"
-                onClick={() => handleMobileToggle(menu.label)}
-                aria-expanded={Boolean(mobileDropdowns[menu.label])}
-              >
-                <span className="text-slate-800 font-bold text-base">{menu.label}</span>
+                 type="button"
+                 className="w-full px-4 py-4 text-left bg-white hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-all duration-200 flex items-center justify-between border-b border-slate-200"
+                 onClick={() => handleMobileToggle(menu.label)}
+                 aria-expanded={Boolean(mobileDropdowns[menu.label])}
+               >
+                 <span className="text-slate-900 font-bold text-base">{menu.label}</span>
                 <svg
                   className={`w-5 h-5 text-slate-500 transition-transform ${mobileDropdowns[menu.label] ? 'rotate-180' : ''}`}
                   viewBox="0 0 20 20"
@@ -211,7 +211,7 @@ const Navbar = () => {
                 </svg>
               </button>
               {mobileDropdowns[menu.label] && (
-                <div className="mobile-dropdown ml-4 mt-1">
+                <div className="mobile-dropdown">
                   {menu.items.map((item) => (
                     <NavLink
                       key={item.label}
@@ -220,10 +220,10 @@ const Navbar = () => {
                         closeMenu();
                         setMobileDropdowns({});
                       }}
-                      className="block w-full px-4 py-3 bg-slate-50 hover:bg-slate-100 transition-colors text-slate-800 border-b border-slate-200"
+                      className="block w-full px-6 py-3 bg-slate-50 hover:bg-slate-100 transition-colors text-slate-800 border-b border-slate-200"
                     >
                       <strong className="block text-slate-900 text-sm font-bold">{item.label}</strong>
-                      <span className="text-xs text-slate-700 block">{item.description}</span>
+                      <span className="text-xs text-slate-700 block leading-tight">{item.description}</span>
                     </NavLink>
                   ))}
                 </div>
@@ -235,7 +235,7 @@ const Navbar = () => {
             <NavLink
               key={link.label}
               to={link.to}
-              className="block w-full px-4 py-3 font-bold text-slate-900 bg-white hover:bg-slate-100 transition-colors border-b border-slate-200"
+              className="block w-full px-4 py-4 font-bold text-slate-900 bg-white hover:bg-slate-100 transition-colors border-b border-slate-200 text-base"
               onClick={() => {
                 closeMenu();
                 setMobileDropdowns({});
@@ -247,7 +247,7 @@ const Navbar = () => {
 
           <NavLink
             to="/contact"
-            className="block w-full brand-cta mt-6 px-4 py-3 text-center font-bold"
+            className="block w-full brand-cta m-4 px-4 py-3 text-center font-bold text-base"
             onClick={() => {
               closeMenu();
               setMobileDropdowns({});
