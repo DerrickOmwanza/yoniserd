@@ -161,7 +161,7 @@ const Navbar = () => {
       {/* Slide-in drawer panel */}
       <div
         id="mobile-menu"
-        className={`fixed top-0 right-0 h-full w-[70%] max-w-sm bg-white shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-out ${
+        className={`fixed top-0 right-0 h-full w-[75%] max-w-xs bg-white shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-out overflow-y-auto ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         role="dialog"
