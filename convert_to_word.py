@@ -1,74 +1,174 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Convert Markdown documents to Word (.docx) format for client delivery
+"""
+
+import os
+import re
+import sys
+from pathlib import Path
 from docx import Document
 from docx.shared import Pt, RGBColor, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-import re
+from docx.enum.style import WD_STYLE_TYPE
 
-# Read the markdown file
-with open('DATA_COLLECTION_CHECKLIST.md', 'r', encoding='utf-8') as f:
-    content = f.read()
+# Set output encoding to UTF-8
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout = open(sys.stdout.fileno(), mode='w', encoding='utf-8', buffering=1)
 
-# Create a new Word document
-doc = Document()
-
-# Set default font
-style = doc.styles['Normal']
-style.font.name = 'Calibri'
-style.font.size = Pt(11)
-
-# Split content by lines
-lines = content.split('\n')
-
-for line in lines:
-    stripped = line.strip()
+def md_to_docx(md_file, docx_file):
+    """Convert markdown file to Word document"""
     
-    # Handle headings
-    if stripped.startswith('# '):
-        heading = stripped[2:].strip()
-        p = doc.add_heading(heading, level=1)
-        p.alignment = WD_ALIGN_PARAGRAPH.LEFT
-    elif stripped.startswith('## '):
-        heading = stripped[3:].strip()
-        p = doc.add_heading(heading, level=2)
-        p.alignment = WD_ALIGN_PARAGRAPH.LEFT
-    elif stripped.startswith('### '):
-        heading = stripped[4:].strip()
-        p = doc.add_heading(heading, level=3)
-        p.alignment = WD_ALIGN_PARAGRAPH.LEFT
-    elif stripped.startswith('#### '):
-        heading = stripped[5:].strip()
-        p = doc.add_heading(heading, level=4)
-        p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+    # Read markdown file
+    with open(md_file, 'r', encoding='utf-8') as f:
+        content = f.read()
     
-    # Handle checkboxes and bullet points
-    elif stripped.startswith('- [ ]'):
-        text = stripped[5:].strip()
-        p = doc.add_paragraph('☐ ' + text, style='List Bullet')
-    elif stripped.startswith('- '):
-        text = stripped[2:].strip()
-        p = doc.add_paragraph(text, style='List Bullet')
+    # Create Document
+    doc = Document()
     
-    # Handle bold text
-    elif '**' in stripped:
-        p = doc.add_paragraph()
-        parts = stripped.split('**')
-        for i, part in enumerate(parts):
-            if i % 2 == 1:  # Bold parts
-                run = p.add_run(part)
-                run.bold = True
+    # Set default font
+    style = doc.styles['Normal']
+    style.font.name = 'Calibri'
+    style.font.size = Pt(11)
+    
+    # Process markdown content line by line
+    lines = content.split('\n')
+    
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        
+        # Skip empty lines
+        if not stripped:
+            doc.add_paragraph()
+            continue
+        
+        # Handle headings
+        if stripped.startswith('# '):
+            # H1
+            p = doc.add_heading(stripped[2:].strip(), level=1)
+            p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            continue
+        elif stripped.startswith('## '):
+            # H2
+            doc.add_heading(stripped[3:].strip(), level=2)
+            continue
+        elif stripped.startswith('### '):
+            # H3
+            doc.add_heading(stripped[4:].strip(), level=3)
+            continue
+        elif stripped.startswith('#### '):
+            # H4
+            doc.add_heading(stripped[5:].strip(), level=4)
+            continue
+        
+        # Handle tables (markdown format: | col | col |)
+        if '|' in stripped:
+            # Skip table separator lines
+            if all(c in '-| ' for c in stripped):
+                continue
+            
+            # Parse table row
+            cells = [cell.strip() for cell in stripped.split('|')[1:-1]]
+            
+            # If this is the first row with content, create table
+            if i == 0 or (i > 0 and '|' not in lines[i-1].strip()):
+                num_cols = len(cells)
+                table = doc.add_table(rows=1, cols=num_cols)
+                table.style = 'Light Grid Accent 1'
+                
+                # Add header row
+                header_cells = table.rows[0].cells
+                for j, cell_text in enumerate(cells):
+                    header_cells[j].text = cell_text
+                    # Bold header
+                    for paragraph in header_cells[j].paragraphs:
+                        for run in paragraph.runs:
+                            run.font.bold = True
             else:
-                p.add_run(part)
+                # Add data row to existing table
+                if 'table' in locals():
+                    row_cells = table.add_row().cells
+                    for j, cell_text in enumerate(cells):
+                        row_cells[j].text = cell_text
+            continue
+        
+        # Handle code blocks
+        if stripped.startswith('```'):
+            # Skip code block markers
+            continue
+        
+        # Handle bold text **text**
+        if '**' in stripped:
+            p = doc.add_paragraph()
+            parts = stripped.split('**')
+            for j, part in enumerate(parts):
+                if j % 2 == 0:
+                    # Regular text
+                    if part:
+                        p.add_run(part)
+                else:
+                    # Bold text
+                    run = p.add_run(part)
+                    run.font.bold = True
+            continue
+        
+        # Handle checkmarks and special characters
+        if stripped.startswith('✅'):
+            p = doc.add_paragraph(stripped, style='List Bullet')
+        elif stripped.startswith('❌'):
+            p = doc.add_paragraph(stripped, style='List Bullet')
+        elif stripped.startswith('🟢'):
+            p = doc.add_paragraph(stripped)
+        elif stripped.startswith('- '):
+            # Bullet point
+            doc.add_paragraph(stripped[2:], style='List Bullet')
+        elif stripped.startswith('* '):
+            # Bullet point
+            doc.add_paragraph(stripped[2:], style='List Bullet')
+        elif re.match(r'^\d+\. ', stripped):
+            # Numbered list
+            doc.add_paragraph(stripped[3:], style='List Number')
+        else:
+            # Regular paragraph
+            doc.add_paragraph(stripped)
     
-    # Handle numbered lists
-    elif re.match(r'^[0-9]+\.\s', stripped):
-        text = re.sub(r'^[0-9]+\.\s', '', stripped)
-        p = doc.add_paragraph(text, style='List Number')
-    
-    # Handle regular paragraphs and empty lines
-    elif stripped:
-        p = doc.add_paragraph(stripped)
-    else:
-        p = doc.add_paragraph()
+    # Save document
+    doc.save(docx_file)
 
-# Save the document
-doc.save('DATA_COLLECTION_CHECKLIST.docx')
-print("Word document created successfully: DATA_COLLECTION_CHECKLIST.docx")
+def main():
+    """Convert all important client documents"""
+    
+    documents = [
+        'QA_EXECUTIVE_SUMMARY.md',
+        'COMPREHENSIVE_QA_AUDIT_REPORT.md',
+        'FINAL_PRODUCTION_STATUS.md',
+        'CSS_OPTIMIZATION_SUMMARY.md',
+    ]
+    
+    base_path = Path('c:/Users/ADMIN/ynis-rd-website')
+    
+    print("[*] Converting Markdown documents to Word format...\n")
+    
+    for md_file in documents:
+        md_path = base_path / md_file
+        docx_path = base_path / md_file.replace('.md', '.docx')
+        
+        if md_path.exists():
+            try:
+                md_to_docx(str(md_path), str(docx_path))
+                print(f"[OK] Converted: {md_file}")
+            except Exception as e:
+                print(f"[ERROR] Error converting {md_file}: {e}")
+        else:
+            print(f"[WARN] File not found: {md_file}")
+    
+    print("\n[SUCCESS] Conversion complete!")
+    print("\nGenerated Word documents:")
+    print("  - QA_EXECUTIVE_SUMMARY.docx")
+    print("  - COMPREHENSIVE_QA_AUDIT_REPORT.docx")
+    print("  - FINAL_PRODUCTION_STATUS.docx")
+    print("  - CSS_OPTIMIZATION_SUMMARY.docx")
+
+if __name__ == '__main__':
+    main()
