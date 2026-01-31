@@ -60,7 +60,7 @@ export const CORE_VALUES = [
 export const BOARD_MEMBER_1_INFO = {
     name: 'Mukolwe Alubokho Patrick',
     title: 'Board Member',
-    description: 'BSc in Quantitative Economics from Makerere University, with expertise in economic planning, policy development and strategy implementation for gender mainstreaming, children, youth, persons with disability, elderly  and marginalized communities. He optimizes program outcomes through resource mobilization, data-driven decision-making and stakeholder engagement, complemented by advocacy, lobbying and community outreaches to achieve impactful results in community development.',
+    description: 'He optimizes program outcomes through resource mobilization, data-driven decision-making and stakeholder engagement.',
 };
 
 // Board Member 2 Information
