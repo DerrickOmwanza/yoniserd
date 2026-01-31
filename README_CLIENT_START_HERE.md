@@ -153,29 +153,31 @@ Use this quick checklist to verify everything is working:
 
 ### Payment Status
 ```
-Deposit Paid:        KSh 7,000 ✅
-Final Payment Due:   KSh 7,000 ⏳
-TOTAL:               KSh 14,000
+Deployment Setup Paid:    KSh 2,000 ✅
+Website Development:      KSh 12,000 ⏳ OUTSTANDING
+TOTAL PROJECT:            KSh 14,000
 ```
 
-### How to Pay the Final Amount
+**⚠️ Important:** Final deployment is pending receipt of the KSh 12,000 payment for website development.
+
+### How to Pay the Outstanding Amount
 
 **Option 1: M-PESA**
 ```
-Amount: KSh 7,000
+Amount: KSh 12,000
 To: [Developer Name]
 Phone: [Phone Number]
-Reference: INV-002-FINAL
+Reference: INV-002-DEV
 ```
 
 **Option 2: Bank Transfer**
 ```
-Amount: KSh 7,000
+Amount: KSh 12,000
 Account Name: [Name]
 Account Number: [Number]
 Bank: [Bank Name]
 Branch: [Branch]
-Reference: INV-002-FINAL
+Reference: INV-002-DEV
 ```
 
 **After Payment:**

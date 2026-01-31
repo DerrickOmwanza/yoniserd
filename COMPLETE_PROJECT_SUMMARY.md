@@ -268,8 +268,8 @@
 - **TOTAL:** **KSh 14,000**
 
 ### Payment Status
-- ✅ Deposit Paid: KSh 7,000
-- ⏳ Final Payment Due: KSh 7,000 (upon approval)
+- ✅ Deployment Setup: KSh 2,000 **PAID**
+- ⏳ Website Development: KSh 12,000 **OUTSTANDING** (Required for final deployment)
 
 ---
 

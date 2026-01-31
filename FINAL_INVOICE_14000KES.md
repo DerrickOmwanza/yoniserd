@@ -99,27 +99,45 @@ Full-Stack Web Developer
 
 | MILESTONE | AMOUNT | STATUS | DATE |
 |-----------|--------|--------|------|
-| **Initial Deposit (50%)** | KSh 7,000 | ✅ PAID | [Insert Date] |
-| **Final Payment (50%)** | KSh 7,000 | ⏳ PENDING | Upon approval |
+| **Deployment & Security Setup** | KSh 2,000 | ✅ PAID | [Insert Date] |
+| **Website Development (8 Pages + Features)** | KSh 12,000 | ⏳ **PENDING** | **REQUIRED BEFORE FINAL DEPLOYMENT** |
 | **TOTAL** | **KSh 14,000** | | |
 
-### Payment Instructions
+### Payment Instructions for Outstanding Balance
+
+**Amount Due:** KSh 12,000 (Website Development)
 
 **Payment Method Options:**
 
 **Option 1: M-PESA**
 - Recipient: [Your Name]
 - Phone Number: [Your Number]
-- Amount: KSh 7,000
+- Amount: KSh 12,000
+- Reference: INV-002-DEV
 
 **Option 2: Bank Transfer**
 - Bank Name: [Bank Name]
 - Account Name: [Your Name]
 - Account Number: [Account Number]
 - Branch: [Branch]
-- Amount: KSh 7,000
+- Amount: KSh 12,000
+- Reference: INV-002-DEV
 
 **Please include transaction details and invoice number for record.**
+
+---
+
+## ⚠️ IMPORTANT NOTICE
+
+**This website is currently deployed on GitHub Pages (free preview), but FINAL DEPLOYMENT to Truehost or production server is contingent upon receipt of the outstanding KSh 12,000 payment for website development.**
+
+**What Client Gets Upon Final Payment:**
+- ✅ Full source code transfer
+- ✅ GitHub repository ownership transfer (if requested)
+- ✅ Production deployment to Truehost or client's hosting
+- ✅ Domain configuration assistance
+- ✅ Final optimization and go-live support
+- ✅ 30-day warranty and support
 
 ---
 
@@ -295,21 +313,25 @@ Developer's liability is limited to the total project fee (KSh 14,000). Client i
 
 ## PAYMENT CONFIRMATION
 
-Upon receipt of final payment (KSh 7,000):
+Upon receipt of final payment (KSh 12,000 for website development):
 
 1. **Client receives:**
    - Full source code access
-   - GitHub repository admin rights (optional)
-   - Deployment documentation
+   - GitHub repository admin rights (if requested)
+   - Production deployment to Truehost/client hosting
+   - Domain configuration assistance
+   - Final go-live optimization
    - 30-day support access
    - Professional certificate of completion
 
 2. **Developer provides:**
-   - Source code handover
+   - Complete source code transfer
    - Repository setup instructions
-   - Domain/hosting guidance
+   - Domain/hosting configuration
+   - Production deployment support
    - Final optimization
    - Support contact information
+   - Warranty period activation
 
 ---
 
@@ -342,7 +364,7 @@ Upon receipt of final payment (KSh 7,000):
 - Total Amount: KSh 14,000
 - Status: Awaiting Final Payment
 
-**Pending Final Payment:** KSh 7,000
+**Outstanding Payment:** KSh 12,000 (Website Development)
 
 ---
 

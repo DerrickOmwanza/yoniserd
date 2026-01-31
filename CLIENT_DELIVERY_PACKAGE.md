@@ -165,34 +165,38 @@ Use this checklist to verify all deliverables:
 - **TOTAL: KSh 14,000**
 
 **Payment Status:**
-- ✅ Deposit Paid: KSh 7,000
-- ⏳ Final Payment Due: KSh 7,000 (upon approval)
+- ✅ Deployment Setup: KSh 2,000 **PAID**
+- ⏳ Website Development: KSh 12,000 **OUTSTANDING** (Required for final deployment)
 
-### Payment Instructions for Final Payment
+### Payment Instructions for Outstanding Balance
+
+**Amount Due:** KSh 12,000 (Website Development)
 
 **Option 1: M-PESA**
 ```
-Amount: KSh 7,000
+Amount: KSh 12,000
 Recipient: [Developer Name]
 Phone: [Developer Phone]
-Reference: INV-002-FINAL
+Reference: INV-002-DEV
 ```
 
 **Option 2: Bank Transfer**
 ```
-Amount: KSh 7,000
+Amount: KSh 12,000
 Account Name: [Developer Name]
 Account Number: [Account Number]
 Bank Name: [Bank Name]
 Branch: [Branch]
-Reference: INV-002-FINAL
+Reference: INV-002-DEV
 ```
 
 **After Payment:**
 - Share the M-PESA/bank transaction receipt
 - Developer will confirm receipt
 - Source code repository access provided
+- Production deployment to Truehost/client hosting
 - Final deployment support available
+- 30-day warranty activated
 
 ---
 
@@ -247,7 +251,7 @@ Reference: INV-002-FINAL
 
 ### Step 4: Approve & Pay (5 minutes)
 1. Confirm you approve the work
-2. Process final payment (KSh 7,000)
+2. Process payment (KSh 12,000 for website development)
 3. Share payment receipt with developer
 
 ### Step 5: Final Deployment (Optional - varies)
