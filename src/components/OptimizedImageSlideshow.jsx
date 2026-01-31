@@ -94,13 +94,14 @@ const OptimizedImageSlideshow = memo(({
   }, [currentIndex, resetTimer]);
 
   // Debounced keyboard navigation
-  const handleKeyDown = useCallback(
-    debounce((e) => {
-      if (e.key === 'ArrowLeft') goToPrevious();
-      if (e.key === 'ArrowRight') goToNext();
-    }, 50),
-    [goToPrevious, goToNext]
-  );
+   // eslint-disable-next-line react-hooks/exhaustive-deps
+   const handleKeyDown = useCallback(
+     debounce((e) => {
+       if (e.key === 'ArrowLeft') goToPrevious();
+       if (e.key === 'ArrowRight') goToNext();
+     }, 50),
+     [goToPrevious, goToNext]
+   );
 
   // Add keyboard navigation
   useEffect(() => {
