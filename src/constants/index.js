@@ -72,7 +72,7 @@ export const BOARD_MEMBER_2_INFO = {
 
 // Programme Officer 2 Information
 export const PROGRAMME_OFFICER_2_INFO = {
-    name: 'Programme Officer',
+    name: 'Sherille Adoyo',
     title: 'Programme Officer',
     description: 'Responsible for assisting in the planning, implementation, and monitoring of various programs and projects.',
 };
