@@ -351,7 +351,7 @@ footer address {
 }
 
 #mobile-menu button {
-    background-color: rgba(255, 255, 255, 0.05) !important;
+    background-color: rgba(255, 255, 255, 0.15) !important;
     color: #ffffff !important;
     display: flex !important;
     width: 100% !important;
