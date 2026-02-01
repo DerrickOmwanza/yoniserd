@@ -1,0 +1,4 @@
+# Ignore Tailwind CSS PostCSS directives
+# @tailwind is a valid PostCSS directive used by Tailwind
+node_modules/
+build/
