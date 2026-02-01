@@ -19,13 +19,16 @@
 .env.production.local
 
 # IDE and Editor
-.vscode/
 .idea/
 *.swp
 *.swo
 *~
 .DS_Store
 .vs/
+
+# VS Code settings (excluded except for shared settings)
+.vscode/launch.json
+.vscode/tasks.json
 
 # Logs
 npm-debug.log*
