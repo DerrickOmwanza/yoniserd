@@ -1,0 +1,8 @@
+{
+    "snyk.advanced.autoSelectOrganization": true,
+    "snyk.advanced.organization": "b180728b-c0e2-479a-8d47-189e260cd71d",
+    "css.lint.unknownAtRules": "ignore",
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
