@@ -15,7 +15,7 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="app-bg min-h-screen">
-        <Router basename="/yoniserd">
+        <Router basename="/">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
